@@ -12,3 +12,4 @@ Users should be able to:
 Extensions
 -	Database for saving favourite videos
 -	Space quiz (NPM planet!) / fact of the day
+- pop-up videos instead of new pages a-la-netflix
