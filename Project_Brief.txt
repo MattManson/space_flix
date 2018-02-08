@@ -1,0 +1,14 @@
+Project Brief
+
+NASA are looking to create a Netflix-style media hub to share their vast selection of images and videos to encourage interest in space exploration.
+
+MVP
+Users should be able to:
+-	Search for videos related to specific space exploration topics
+-	Click on specific tags to get recommended related media
+-	See NASA image of the day as banner
+-	Hear space sounds
+
+Extensions
+-	Database for saving favourite videos
+-	Space quiz (NPM planet!) / fact of the day
