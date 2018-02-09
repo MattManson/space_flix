@@ -1,4 +1,5 @@
 const NasaAPI = require('./models/nasaAPI');
+const VideoView = require('./views/videoView.js');
 const SoundNASAData = require('./models/SoundNASAData');
 const ApiKey = require('./API_key')
 
@@ -8,9 +9,6 @@ const app = function () {
     var nasaAPI = new NasaAPI(venusURL);
     nasaAPI.onLoad = videoView.render.bind(videoView);
     nasaAPI.getCollectionURLS();
-
-    const NasaAPI = require('./models/nasaAPI.js');
-    const VideoView = require('./views/videoView.js');
 
     var catrionaKey = new ApiKey().getCatrionaKey();
     var mattKey = new ApiKey().getMattKey();

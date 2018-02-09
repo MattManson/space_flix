@@ -68,6 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const NasaAPI = __webpack_require__(1);
+const VideoView = __webpack_require__(6);
 const SoundNASAData = __webpack_require__(3);
 const ApiKey = __webpack_require__(5)
 
@@ -77,9 +78,6 @@ const app = function () {
     var nasaAPI = new NasaAPI(venusURL);
     nasaAPI.onLoad = videoView.render.bind(videoView);
     nasaAPI.getCollectionURLS();
-
-    const NasaAPI = __webpack_require__(1);
-    const VideoView = __webpack_require__(6);
 
     var catrionaKey = new ApiKey().getCatrionaKey();
     var mattKey = new ApiKey().getMattKey();
