@@ -1,15 +1,13 @@
 const NasaAPI = require('./models/nasaAPI.js');
+const VideoView = require('./views/videoView.js');
 
-
-const doSomethingWithData = function(data) {
-    console.log(data)
-}
 
 const app = function () {
-    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=venus'
+    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=jupiter'
+    var videoView = new VideoView(document.querySelector('#test-videos'));
     var nasaAPI = new NasaAPI(venusURL);
-    nasaAPI.getCollectionURLS(doSomethingWithData);
-    console.log(nasaAPI.colllectionURLs);
+    nasaAPI.onLoad = videoView.render.bind(videoView);
+    nasaAPI.getCollectionURLS();
 
 
 }
