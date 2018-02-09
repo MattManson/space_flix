@@ -28,13 +28,4 @@ NasaAPI.prototype.getJSONData = function (hrefs) {
     }.bind(this))
 }
 
-// NasaAPI.prototype.setCollectionURLs = function (hrefs) {
-//     this.colllectionURLs = hrefs;
-// }.bind(this);
-
-// var unconvertedString = searchResults.collection.items[0].href;
-// var changedString = unconvertedString.replace(/ /g,"%20");
-// console.log(unconvertedString);
-// console.log(changedString);
-
 module.exports = NasaAPI;

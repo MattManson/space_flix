@@ -72,7 +72,7 @@ const VideoView = __webpack_require__(3);
 
 
 const app = function () {
-    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=jupiter'
+    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=asteroid'
     var videoView = new VideoView(document.querySelector('#test-videos'));
     var nasaAPI = new NasaAPI(venusURL);
     nasaAPI.onLoad = videoView.render.bind(videoView);
@@ -116,15 +116,6 @@ NasaAPI.prototype.getJSONData = function (hrefs) {
         request.getRequest(this.onLoad);
     }.bind(this))
 }
-
-// NasaAPI.prototype.setCollectionURLs = function (hrefs) {
-//     this.colllectionURLs = hrefs;
-// }.bind(this);
-
-// var unconvertedString = searchResults.collection.items[0].href;
-// var changedString = unconvertedString.replace(/ /g,"%20");
-// console.log(unconvertedString);
-// console.log(changedString);
 
 module.exports = NasaAPI;
 
