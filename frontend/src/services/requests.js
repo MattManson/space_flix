@@ -15,17 +15,19 @@ Request.prototype.requestComplete = function(){
     }
     var jsonString = this.responseText;
     var searchResults = JSON.parse(jsonString);
-    var unconvertedString = searchResults.collection.items[0].href;
-    var changedString = unconvertedString.replace(/ /g,"%20");
-    console.log(unconvertedString);
-    console.log(changedString);
+    this.getHrefs(searchResults);
+    // var unconvertedString = searchResults.collection.items[0].href;
+    // var changedString = unconvertedString.replace(/ /g,"%20");
+    // console.log(unconvertedString);
+    // console.log(changedString);
 
     // var jsonString = JSON.stringify(videos);
     // localStorage.setItem('videos', jsonString);
 }
 
 // Request.getHrefs = function (searchResults) {
-//     var hrefs = videos.map(searchResults = searchResults
+//     var hrefs = videos.map(searchResults = searchResults => [searchResults.collection.items.href]);
+//     return hrefs;
 // }
 
 module.exports = Request;
