@@ -68,20 +68,21 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const NasaAPI = __webpack_require__(1);
+const SoundNASAData = __webpack_require__(3);
+const ApiKey = __webpack_require__(5)
 
 const app = function () {
-    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=venus'
-    var venusVideoURL = 'https://images-assets.nasa.gov/video/JPL-19621214-MARINRf-0001-AVC2002150 First Flyby of Another Planet Mariner 2/collection.json'
-    var video1 = 'https://images-assets.nasa.gov/video/JPL-19621214-MARINRf-0001-AVC2002150%20First%20Flyby%20of%20Another%20Planet%20Mariner%202/collection.json'
+    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=venus';
     var nasaAPI = new NasaAPI(venusURL);
     nasaAPI.getCollectionURLS();
-
-    var testVideo = document.querySelector('#test-video');
-
-
+    var catrionaKey = new ApiKey().getCatrionaKey();
+    var mattKey = new ApiKey().getMattKey();
+    var soundNasaApi = new SoundNASAData('https://api.nasa.gov/planetary/sounds?q=mars&api_key=' + mattKey);
+    soundNasaApi.getData();
 }
 
 window.addEventListener('load', app);
+
 
 /***/ }),
 /* 1 */
@@ -137,8 +138,47 @@ Request.prototype.getRequest = function(callback) {
 module.exports = Request;
 
 
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const Request = __webpack_require__(2);
+
+const SoundNASAData = function(url) {
+  this.url = url;
+}
+
+SoundNASAData.prototype.getData = function() {
+  let request = new Request(this.url);
+  request.getRequest(this.showData);
+};
+
+SoundNASAData.prototype.showData = function(data) {
+  console.log(data.items);
+};
+
+module.exports = SoundNASAData;
 
 
+/***/ }),
+/* 4 */,
+/* 5 */
+/***/ (function(module, exports) {
+
+const APIKey = function(){
+  this.catrionaKey = 'QLn3BOptgkNzClciQuNWXzwV0AsUVKOCr01MbgFk';
+  this.mattKey = "9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k";
+};
+
+APIKey.prototype.getCatrionaKey = function () {
+  return this.catrionaKey;
+};
+
+APIKey.prototype.getMattKey = function () {
+  return this.mattKey;
+};
+
+module.exports = APIKey;
 
 
 /***/ })

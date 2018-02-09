@@ -1,18 +1,16 @@
 const Request = require('../services/requests.js');
 
 const SoundNASAData = function(url) {
-  this.url
+  this.url = url;
 }
 
-SoundNASAData.prototype.getData = function () {
+SoundNASAData.prototype.getData = function() {
   let request = new Request(this.url);
-  request.getRequest(showData);
+  request.getRequest(this.showData);
 };
 
-SoundNASAData.prototype.showData = function (data) {
-  
+SoundNASAData.prototype.showData = function(data) {
+  console.log(data.items);
 };
 
 module.exports = SoundNASAData;
-
-https://api.nasa.gov/planetary/sounds?q=apollo&api_key=QLn3BOptgkNzClciQuNWXzwV0AsUVKOCr01MbgFk
