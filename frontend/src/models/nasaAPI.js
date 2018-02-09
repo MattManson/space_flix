@@ -2,7 +2,8 @@ const Requests = require('../services/requests');
 
 const NasaAPI = function (url) {
     this.url = url;
-    this.colllectionURLs = [];
+    this.collectionURLs = [];
+    this.onLoad = null;
 }
 
 NasaAPI.prototype.getCollectionURLS = function () {
@@ -21,15 +22,10 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
 }
 
 NasaAPI.prototype.getJSONData = function (hrefs) {
-    console.log(hrefs)
     hrefs.forEach(function (url) {
         var request = new Requests(url)
-        request.getRequest(this.seeCollection);
+        request.getRequest(this.onLoad);
     }.bind(this))
-}
-//
-NasaAPI.prototype.seeCollection= function(data){
-    console.log(data)
 }
 
 // NasaAPI.prototype.setCollectionURLs = function (hrefs) {

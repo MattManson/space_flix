@@ -68,17 +68,15 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const NasaAPI = __webpack_require__(1);
+const VideoView = __webpack_require__(3);
 
-
-const doSomethingWithData = function(data) {
-    console.log(data)
-}
 
 const app = function () {
-    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=venus'
+    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=jupiter'
+    var videoView = new VideoView(document.querySelector('#test-videos'));
     var nasaAPI = new NasaAPI(venusURL);
-    nasaAPI.getCollectionURLS(doSomethingWithData);
-    console.log(nasaAPI.colllectionURLs);
+    nasaAPI.onLoad = videoView.render.bind(videoView);
+    nasaAPI.getCollectionURLS();
 
 
 }
@@ -93,7 +91,8 @@ const Requests = __webpack_require__(2);
 
 const NasaAPI = function (url) {
     this.url = url;
-    this.colllectionURLs = [];
+    this.collectionURLs = [];
+    this.onLoad = null;
 }
 
 NasaAPI.prototype.getCollectionURLS = function () {
@@ -112,15 +111,10 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
 }
 
 NasaAPI.prototype.getJSONData = function (hrefs) {
-    console.log(hrefs)
     hrefs.forEach(function (url) {
         var request = new Requests(url)
-        request.getRequest(this.seeCollection);
+        request.getRequest(this.onLoad);
     }.bind(this))
-}
-//
-NasaAPI.prototype.seeCollection= function(data){
-    console.log(data)
 }
 
 // NasaAPI.prototype.setCollectionURLs = function (hrefs) {
@@ -162,6 +156,30 @@ module.exports = Request;
 
 
 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+const VideoView = function (container) {
+    this.container = container;
+}
+
+VideoView.prototype.render = function (data) {
+        var correctVideoURL = data[0].replace(/ /g,"%20");
+        var correctThumbNailURL = data[data.length-2].replace(/ /g,"%20");
+        console.log(correctThumbNailURL);
+        var img = document.createElement('img');
+        img.width = 320;
+        img.height = 240;
+        img.src = correctThumbNailURL;
+        img.onclick = function() {
+            window.location.href = correctVideoURL;
+        };
+        this.container.appendChild(img);
+}
+
+module.exports = VideoView;
 
 /***/ })
 /******/ ]);
