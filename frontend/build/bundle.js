@@ -74,7 +74,7 @@ const app = function () {
     var venusVideoURL = 'https://images-assets.nasa.gov/video/JPL-19621214-MARINRf-0001-AVC2002150 First Flyby of Another Planet Mariner 2/collection.json'
     var video1 = 'https://images-assets.nasa.gov/video/JPL-19621214-MARINRf-0001-AVC2002150%20First%20Flyby%20of%20Another%20Planet%20Mariner%202/collection.json'
     var nasaAPI = new NasaAPI(venusURL);
-    nasaAPI.makeRequest();
+    nasaAPI.getCollectionURLS();
 
     var testVideo = document.querySelector('#test-video');
 
@@ -85,36 +85,61 @@ window.addEventListener('load', app);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+const Request = __webpack_require__(2);
 
 const NasaAPI = function (url) {
     this.url = url;
-    this.collletionURLS = [];
+    this.colllectionURLS = [];
 }
 
-NasaAPI.prototype.requestComplete = function(){
-    if(this.status !== 200){
-        return;
-    }
-    var jsonString = this.responseText;
-    var videos = JSON.parse(jsonString);
-    var unconvertedString = videos.collection.items[0].href;
-    var changedString = unconvertedString.replace(/ /g,"%20");
-    console.log(unconvertedString);
-    console.log(changedString);
-
-    // var jsonString = JSON.stringify(videos);
-    // localStorage.setItem('videos', jsonString);
+NasaAPI.prototype.getCollectionURLS = function () {
+    var request = new Request(this.url);
+    request.getRequest()
 }
 
-NasaAPI.prototype.makeRequest = function() {
+
+NasaAPI.prototype.getHrefs = function (searchResults) {
+    var hrefs = videos.map(searchResults = searchResults => [searchResults.collection.items.href]);
+    return hrefs;
+}
+
+// var unconvertedString = searchResults.collection.items[0].href;
+// var changedString = unconvertedString.replace(/ /g,"%20");
+// console.log(unconvertedString);
+// console.log(changedString);
+
+module.exports = NasaAPI;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+const Request = function (url) {
+    this.url = url;
+}
+
+Request.prototype.getRequest = function(callback) {
     var request = new XMLHttpRequest();
     request.open('GET', this.url);
-    request.addEventListener('load', this.requestComplete);
+    request.addEventListener('load', function () {
+        if(this.status != 200){
+            return;
+        }
+        const responseBody = JSON.parse(this.responseText);
+        callback(responseBody);
+    });
     request.send();
 }
 
-module.exports = NasaAPI;
+
+module.exports = Request;
+
+
+
+
+
 
 /***/ })
 /******/ ]);
