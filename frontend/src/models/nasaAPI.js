@@ -17,19 +17,20 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
     items.forEach(function (item) {
         hrefs.push(item.href);
     }.bind(this))
-    console.log(hrefs);
+    this.getJSONData(hrefs);
 }
 
-// NasaAPI.prototype.getJSONData = function (hrefs) {
-//     hrefs.forEach(function (url) {
-//         var request = new Requests(url)
-//         request.getRequest(this.seeCollection.bind);
-//     })
-// }
+NasaAPI.prototype.getJSONData = function (hrefs) {
+    console.log(hrefs)
+    hrefs.forEach(function (url) {
+        var request = new Requests(url)
+        request.getRequest(this.seeCollection);
+    }.bind(this))
+}
 //
-// NasaAPI.prototype.seeCollection= function(data){
-//     console.log(data)
-// }
+NasaAPI.prototype.seeCollection= function(data){
+    console.log(data)
+}
 
 // NasaAPI.prototype.setCollectionURLs = function (hrefs) {
 //     this.colllectionURLs = hrefs;
