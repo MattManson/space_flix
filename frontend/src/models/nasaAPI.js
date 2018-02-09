@@ -1,6 +1,6 @@
 const NasaAPI = function (url) {
     this.url = url;
-    this.data = [];
+    this.collletionURLS = [];
 }
 
 NasaAPI.prototype.requestComplete = function(){
@@ -9,9 +9,13 @@ NasaAPI.prototype.requestComplete = function(){
     }
     var jsonString = this.responseText;
     var videos = JSON.parse(jsonString);
-    console.log(videos);
-    var jsonString = JSON.stringify(videos);
-    localStorage.setItem('videos', jsonString);
+    var unconvertedString = videos.collection.items[0].href;
+    var changedString = unconvertedString.replace(/ /g,"%20");
+    console.log(unconvertedString);
+    console.log(changedString);
+
+    // var jsonString = JSON.stringify(videos);
+    // localStorage.setItem('videos', jsonString);
 }
 
 NasaAPI.prototype.makeRequest = function() {
