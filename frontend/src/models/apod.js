@@ -7,6 +7,7 @@ const Apod = function(url){
 
 Apod.prototype.getImages = function(){
   var request = new Request(this.url);
+  request.getRequest(this.)
 }
 
 //

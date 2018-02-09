@@ -145,36 +145,9 @@ module.exports = Request;
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-const Request = __webpack_require__(2);
-
-const Apod = function(url){
-  this.url = url;
-  this.recentImages = [];
-}
-
-Apod.prototype.getImages = function(){
-  var request = new Request(this.url);
-}
-
-//
-// Apod.prototype.displayImage = function(imageDetails){
-//   var imageLocation = document.querySelector('#apod');
-//   var apodImage = document.createElement('img');
-//   apodImage.src = imageDetails.hdurl
-//   imageLocation.appendChild(apodImage);
-// }
-//
-// Apod.prototype.getImage = function(){
-//   var request = new Request(this.url);
-//   request.getRequest(this.displayImage)
-// }
-
-
-
-module.exports = Apod;
-
+throw new Error("Module parse failed: Unexpected token (10:26)\nYou may need an appropriate loader to handle this file type.\n| Apod.prototype.getImages = function(){\n|   var request = new Request(this.url);\n|   request.getRequest(this.)\n| }\n| ");
 
 /***/ })
 /******/ ]);
