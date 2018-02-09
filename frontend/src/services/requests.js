@@ -17,7 +17,3 @@ Request.prototype.getRequest = function(callback) {
 
 
 module.exports = Request;
-
-
-
-

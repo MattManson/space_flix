@@ -68,20 +68,26 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const NasaAPI = __webpack_require__(1);
+const Apod = __webpack_require__(3);
 
 const app = function () {
     var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=venus'
     var venusVideoURL = 'https://images-assets.nasa.gov/video/JPL-19621214-MARINRf-0001-AVC2002150 First Flyby of Another Planet Mariner 2/collection.json'
     var video1 = 'https://images-assets.nasa.gov/video/JPL-19621214-MARINRf-0001-AVC2002150%20First%20Flyby%20of%20Another%20Planet%20Mariner%202/collection.json'
+    var apodurl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k&start_date=2018-01-30&end_date=2018-02-09'
     var nasaAPI = new NasaAPI(venusURL);
     nasaAPI.getCollectionURLS();
 
     var testVideo = document.querySelector('#test-video');
 
+    var apod = new Apod(apodurl);
+    apod.getImage()
+
 
 }
 
 window.addEventListener('load', app);
+
 
 /***/ }),
 /* 1 */
@@ -137,8 +143,37 @@ Request.prototype.getRequest = function(callback) {
 module.exports = Request;
 
 
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const Request = __webpack_require__(2);
+
+const Apod = function(url){
+  this.url = url;
+  this.recentImages = [];
+}
+
+Apod.prototype.getImages = function(){
+  var request = new Request(this.url);
+}
+
+//
+// Apod.prototype.displayImage = function(imageDetails){
+//   var imageLocation = document.querySelector('#apod');
+//   var apodImage = document.createElement('img');
+//   apodImage.src = imageDetails.hdurl
+//   imageLocation.appendChild(apodImage);
+// }
+//
+// Apod.prototype.getImage = function(){
+//   var request = new Request(this.url);
+//   request.getRequest(this.displayImage)
+// }
 
 
+
+module.exports = Apod;
 
 
 /***/ })
