@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const NasaAPI = __webpack_require__(1);
-const VideoView = __webpack_require__(3);
+const VideoView = __webpack_require__(6);
 
 
 const app = function () {
@@ -149,7 +149,10 @@ module.exports = Request;
 
 
 /***/ }),
-/* 3 */
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports) {
 
 const VideoView = function (container) {
