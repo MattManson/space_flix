@@ -11,21 +11,19 @@ const app = function () {
     var apodurl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k'
 
     let searchButtonClicked = function(){
-      videoView.clear();
+      // videoView.clear();
       var searchBox = document.querySelector('input').value.replace(/ /g,"%20");
-
-    var nasaAPI = new NasaAPI(videosURL + searchBox);
-    console.log(videosURL + searchBox);
-    nasaAPI.onLoad = videoView.render.bind(videoView);
-    nasaAPI.getCollectionURLS();
-    let frontPageContainer = document.querySelector('#front-page');
-    frontPageContainer.className = 'invisible';
-    let viewPageContainer= document.querySelector('#view-page');
-    viewPageContainer.className = 'visible';
-
+      var nasaAPI = new NasaAPI(videosURL + searchBox);
+      console.log(videosURL + searchBox);
+      nasaAPI.onLoad = videoView.render.bind(videoView);
+      nasaAPI.getCollectionURLS();
+      let frontPageContainer = document.querySelector('#front-page');
+      frontPageContainer.className = 'invisible';
+      let viewPageContainer= document.querySelector('#view-page');
+      viewPageContainer.className = 'visible';
     }
 
-    var search = document.querySelector('#search')
+    var search = document.querySelector('#search');
     search.addEventListener('click', searchButtonClicked);
 
 
@@ -45,15 +43,12 @@ const app = function () {
         frontPageContainer.className = 'invisible';
         let viewPageContainer= document.querySelector('#view-page');
         viewPageContainer.className = 'visible';
+    };
 
-    }
-
-    var counter = 1;
     let buttons = document.querySelectorAll('button');
-    for ( var counter = 0; counter < buttons.length; counter++)
-    {
-        buttons[counter].addEventListener("click",buttonClicked );
-    }
-}
+    for (let counter = 0; counter < buttons.length; counter++) {
+      buttons[counter].addEventListener("click", buttonClicked );
+    };
+};
 
 window.addEventListener('load', app);
