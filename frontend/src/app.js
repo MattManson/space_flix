@@ -11,7 +11,7 @@ const app = function () {
     var apodurl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k'
 
     let searchButtonClicked = function(){
-      // videoView.clear();
+      videoView.clear();
       var searchBox = document.querySelector('input').value.replace(/ /g,"%20");
       var nasaAPI = new NasaAPI(videosURL + searchBox);
       console.log(videosURL + searchBox);

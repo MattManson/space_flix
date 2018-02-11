@@ -5,8 +5,7 @@ const Apod = function(url){
   this.recentImages = [];
 }
 
-Apod.prototype.displayImage = function(imageDetails){
-  console.log(imageDetails);
+Apod.prototype.displayImage = function(imageDetails) {
   var imageLocation = document.querySelector('#apod-slider');
   var apodImage = document.createElement('img');
   apodImage.src = imageDetails.hdurl;

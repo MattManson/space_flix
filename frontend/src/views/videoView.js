@@ -8,7 +8,6 @@ VideoView.prototype.render = function (data) {
   console.log(correctVideoURL);
   if (!correctVideoURL.includes(substring)){
     var correctThumbNailURL = data[data.length-2].replace(/ /g,"%20");
-    // console.log(correctThumbNailURL);
     var img = document.createElement('img');
     img.src = " "
     img.width = 320;
@@ -19,7 +18,8 @@ VideoView.prototype.render = function (data) {
     };
     this.container.appendChild(img);
   }
-}
+};
+
 VideoView.prototype.clear = function(){
   this.container.innerText = " ";
 }
