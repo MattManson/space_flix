@@ -1,3 +1,4 @@
+frontend/.idea
 frontend/node_modules
 frontend/build/bundle.js
 frontend/build/bundle.js.map

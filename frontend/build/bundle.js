@@ -68,11 +68,11 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const NasaAPI = __webpack_require__(1);
-const VideoView = __webpack_require__(6);
+const VideoView = __webpack_require__(3);
 
 
 const app = function () {
-    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=asteroid'
+    var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=space'
     var videoView = new VideoView(document.querySelector('#test-videos'));
     var nasaAPI = new NasaAPI(venusURL);
     nasaAPI.onLoad = videoView.render.bind(videoView);
@@ -149,10 +149,7 @@ module.exports = Request;
 
 
 /***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */
+/* 3 */
 /***/ (function(module, exports) {
 
 const VideoView = function (container) {
