@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 frontend/.idea
+=======
+>>>>>>> c59d8a19d85bdcab35045c93e6348df912508de1
 frontend/node_modules
 frontend/build/bundle.js
 frontend/build/bundle.js.map
