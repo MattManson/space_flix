@@ -9,8 +9,11 @@ Apod.prototype.displayImage = function(imageDetails){
   console.log(imageDetails);
   var imageLocation = document.querySelector('#apod-slider');
   var apodImage = document.createElement('img');
-  apodImage.src = imageDetails.hdurl
-  apodImage.width = 800;
+  apodImage.src = imageDetails.hdurl;
+  if(apodImage.height> apodImage.width) {
+    apodImage.height = '100%';
+    apodImage.width = 'auto';
+  }
   imageLocation.appendChild(apodImage);
 }
 

@@ -14,3 +14,22 @@ h1 {
   text-align: center;
   padding: 1em;
 }
+
+.visible{
+
+}
+
+.invisible{
+  display: none;
+}
+
+#apod-slider {
+  display: grid;
+  justify-content: center;
+  height: 30em;
+  background-color: black;
+}
+
+#apod-slider img {
+  height: 100%;
+}
