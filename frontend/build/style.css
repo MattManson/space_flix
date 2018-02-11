@@ -15,18 +15,16 @@ h1 {
   padding: 1em;
 }
 
-.visible{
-
-}
-
 .invisible{
   display: none;
 }
 
 #apod-slider {
+  background-size: cover;
   display: grid;
   justify-content: center;
   height: 30em;
+  width: 70em;
   background-color: black;
 }
 
