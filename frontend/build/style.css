@@ -1,23 +1,16 @@
-/* .container{
-    width:800px;
-    height:400px;
-    padding:20px;
-    border:1px solid gray;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    background: black;
+body {
+  margin: 0;
 }
-.image-slider-wrapper{
-    overflow: hidden;
+
+header {
+  display: block;
+  background-color: black;
 }
-#image_slider{
-    position: relative;
-    height: 280px;
-    padding:0;
+
+h1 {
+  color: white;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
 }
-#image_slider li{
-    max-width: 100%;
-    float:left;
-    list-style: none;
-} */
