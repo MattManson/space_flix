@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const NasaAPI = __webpack_require__(1);
-const Apod = __webpack_require__(3);
+const Apod = __webpack_require__(4);
 
 const app = function () {
     var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=venus'
@@ -144,7 +144,8 @@ module.exports = Request;
 
 
 /***/ }),
-/* 3 */
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports) {
 
 throw new Error("Module parse failed: Unexpected token (10:26)\nYou may need an appropriate loader to handle this file type.\n| Apod.prototype.getImages = function(){\n|   var request = new Request(this.url);\n|   request.getRequest(this.)\n| }\n| ");
