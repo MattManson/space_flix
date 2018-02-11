@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SpaceFlix</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="bundle.js"></script>
-</head>
-<body>
-  <header>
-    <h1>SPAAAAAAAAAAAAACEFLIX</h1>
-    <input type="text" placeholder="Search ">
-    <button type="submit" id="search">Go</button>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <title>SpaceFlix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href = "http://localhost:3000/" id="test">HOME</a>
+      <h1>SPAAAAAAAAAAAAACEFLIX</h1>
+      <div>
+        <input type="text" placeholder="Search">
+        <button type="submit" id="search">Go</button>
+      </div>
+    </header>
 
-  <container class="visble" id="front-page">
-    <div id="apod-slider"></div>
-    <button id="jupiter">JUPITER</button>
-    <button id="saturn">SATURN</button>
-    <button id="earth">EARTH</button>
-    <button id="venus">VENUS</button>
-    <button id="mars">MARS</button>
-    <button id="neptune">NEPTUNE</button>
-  </container>
+    <container class="visble" id="front-page">
+      <div id="apod-slider"></div>
+      <button id="jupiter">JUPITER</button>
+      <button id="saturn">SATURN</button>
+      <button id="earth">EARTH</button>
+      <button id="venus">VENUS</button>
+      <button id="mars">MARS</button>
+      <button id="neptune">NEPTUNE</button>
+    </container>
 
-  <container class="invisible" id="view-page">
-    <div id="test-videos"></div>
-  </container>
+    <container class="invisible" id="view-page">
+      <div id="test-videos"></div>
+    </container>
   </body>
 </html>
