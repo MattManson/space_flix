@@ -16,4 +16,8 @@ VideoView.prototype.render = function (data) {
         this.container.appendChild(img);
 }
 
+VideoView.prototype.clear = function(){
+  this.container.innerText = " ";
+}
+
 module.exports = VideoView;

@@ -10,6 +10,25 @@ const app = function () {
     var videoView = new VideoView(document.querySelector('#test-videos'));
     var apodurl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k'
 
+    let searchButtonClicked = function(){
+      videoView.clear();
+      var searchBox = document.querySelector('input').value.replace(/ /g,"%20");
+
+    var nasaAPI = new NasaAPI(videosURL + searchBox);
+    console.log(videosURL + searchBox);
+    nasaAPI.onLoad = videoView.render.bind(videoView);
+    nasaAPI.getCollectionURLS();
+    let frontPageContainer = document.querySelector('#front-page');
+    frontPageContainer.className = 'invisible';
+    let viewPageContainer= document.querySelector('#view-page');
+    viewPageContainer.className = 'visible';
+
+    }
+
+    var search = document.querySelector('#search')
+    search.addEventListener('click', searchButtonClicked);
+
+
     var apod = new Apod(apodurl);
     apod.getImage();
 
@@ -19,7 +38,6 @@ const app = function () {
     soundNasaApi.getData();
 
     let buttonClicked = function () {
-        console.log(this.id);
         var nasaAPI = new NasaAPI(videosURL + this.id);
         nasaAPI.onLoad = videoView.render.bind(videoView);
         nasaAPI.getCollectionURLS();
