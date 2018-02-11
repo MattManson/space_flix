@@ -1,7 +1,6 @@
 const NasaAPI = require('./models/nasaAPI');
 const VideoView = require('./views/videoView.js');
 const Apod = require('./models/apod.js');
-
 const SoundNASAData = require('./models/SoundNASAData');
 const ApiKey = require('./API_key');
 
@@ -14,26 +13,30 @@ const app = function () {
       videoView.clear();
       var searchBox = document.querySelector('input').value.replace(/ /g,"%20");
       var nasaAPI = new NasaAPI(videosURL + searchBox);
-      console.log(videosURL + searchBox);
       nasaAPI.onLoad = videoView.render.bind(videoView);
       nasaAPI.getCollectionURLS();
       let frontPageContainer = document.querySelector('#front-page');
       frontPageContainer.className = 'invisible';
       let viewPageContainer= document.querySelector('#view-page');
       viewPageContainer.className = 'visible';
-    }
+    };
+
+    let enterPressed = function() {
+      if (event.keyCode === 13) {
+        var nasaAPI = new NasaAPI(videosURL + searchBox.value.replace(/ /g,"%20"));
+        nasaAPI.onLoad = videoView.render.bind(videoView);
+        nasaAPI.getCollectionURLS();
+        let frontPageContainer = document.querySelector('#front-page');
+        frontPageContainer.className = 'invisible';
+        let viewPageContainer= document.querySelector('#view-page');
+        viewPageContainer.className = 'visible';
+      }
+    };
 
     var search = document.querySelector('#search');
+    var searchBox = document.querySelector('input');
     search.addEventListener('click', searchButtonClicked);
-
-
-    var apod = new Apod(apodurl);
-    apod.getImage();
-
-    var catrionaKey = new ApiKey().getCatrionaKey();
-    var mattKey = new ApiKey().getMattKey();
-    var soundNasaApi = new SoundNASAData('https://api.nasa.gov/planetary/sounds?q=mars&api_key=' + mattKey);
-    soundNasaApi.getData();
+    searchBox.addEventListener('keyup', enterPressed);
 
     let buttonClicked = function () {
         var nasaAPI = new NasaAPI(videosURL + this.id);
@@ -49,6 +52,14 @@ const app = function () {
     for (let counter = 0; counter < buttons.length; counter++) {
       buttons[counter].addEventListener("click", buttonClicked );
     };
+
+    var apod = new Apod(apodurl);
+    apod.getImage();
+
+    var catrionaKey = new ApiKey().getCatrionaKey();
+    var mattKey = new ApiKey().getMattKey();
+    var soundNasaApi = new SoundNASAData('https://api.nasa.gov/planetary/sounds?q=mars&api_key=' + mattKey);
+    soundNasaApi.getData();
 };
 
 window.addEventListener('load', app);

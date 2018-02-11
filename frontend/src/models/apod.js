@@ -6,6 +6,7 @@ const Apod = function(url){
 }
 
 Apod.prototype.displayImage = function(imageDetails) {
+  console.log(imageDetails);
   var imageLocation = document.querySelector('#apod-slider');
   var apodImage = document.createElement('img');
   apodImage.src = imageDetails.hdurl;
