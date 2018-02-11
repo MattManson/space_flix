@@ -14,10 +14,41 @@ Apod.prototype.displayImage = function(imageDetails){
   imageLocation.appendChild(apodImage);
 }
 
-Apod.prototype.getImage = function(){
-  var request = new Request(this.url);
-  request.getRequest(this.displayImage)
+Apod.prototype.bannerImages = function(imageURLs) {
+  var imageLocation = document.querySelector('#apod-slider');
+  var apodImage = document.createElement('img');
+  for(let i = 0; i < imageURLs.length; i++){
+        (function (i) {
+        console.log(imageURLs[i]);
+        setTimeout(function(){apodImage.src = imageURLs[i];
+        apodImage.width = 800;
+        imageLocation.appendChild(apodImage)}, 3000*i);
+      }.bind(this))(i);
+  }
 }
+
+Apod.prototype.getImages = function(responseBody){
+  var imageURLs = [];
+
+  responseBody.forEach(function(element){
+    imageURLs.push(element.hdurl)
+  })
+  console.log(this)
+  this.bannerImages(imageURLs);
+}
+
+
+
+
+Apod.prototype.getImage = function(){
+  // console.log(this);
+  var request = new Request(this.url);
+  request.getRequest(this.getImages.bind(this))
+}
+
+
+
+
 
 module.exports = Apod;
 

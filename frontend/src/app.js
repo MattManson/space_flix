@@ -8,7 +8,7 @@ const ApiKey = require('./API_key')
 const app = function () {
     var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=space'
     var videoView = new VideoView(document.querySelector('#test-videos'));
-    var apodurl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k'
+    var apodurl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k&start_date=2018-01-30&end_date=2018-02-09'
 
     var apod = new Apod(apodurl);
     apod.getImage()
