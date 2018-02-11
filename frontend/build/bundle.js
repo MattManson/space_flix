@@ -69,19 +69,27 @@
 
 const NasaAPI = __webpack_require__(1);
 const VideoView = __webpack_require__(3);
-
+const Apod = __webpack_require__(4);
 
 const app = function () {
     var venusURL = 'https://images-api.nasa.gov/search?media_type=video&keywords=asteroid'
     var videoView = new VideoView(document.querySelector('#test-videos'));
+    var apodurl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k'
+
+    var apod = new Apod(apodurl);
+    apod.getImage()
+    // apod.imagesForSlider();
+    // apod.makeSlider();
+
     var nasaAPI = new NasaAPI(venusURL);
     nasaAPI.onLoad = videoView.render.bind(videoView);
     nasaAPI.getCollectionURLS();
 
 
-}
+  }
 
 window.addEventListener('load', app);
+
 
 /***/ }),
 /* 1 */
@@ -144,10 +152,6 @@ Request.prototype.getRequest = function(callback) {
 module.exports = Request;
 
 
-
-
-
-
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
@@ -159,7 +163,7 @@ const VideoView = function (container) {
 VideoView.prototype.render = function (data) {
         var correctVideoURL = data[0].replace(/ /g,"%20");
         var correctThumbNailURL = data[data.length-2].replace(/ /g,"%20");
-        console.log(correctThumbNailURL);
+        // console.log(correctThumbNailURL);
         var img = document.createElement('img');
         img.width = 320;
         img.height = 240;
@@ -171,6 +175,74 @@ VideoView.prototype.render = function (data) {
 }
 
 module.exports = VideoView;
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const Request = __webpack_require__(2);
+
+const Apod = function(url){
+  this.url = url;
+  this.recentImages = [];
+}
+
+Apod.prototype.displayImage = function(imageDetails){
+  console.log(imageDetails);
+  var imageLocation = document.querySelector('#apod-slider');
+  var apodImage = document.createElement('img');
+  apodImage.src = imageDetails.hdurl
+  imageLocation.appendChild(apodImage);
+}
+
+Apod.prototype.getImage = function(){
+  var request = new Request(this.url);
+  request.getRequest(this.displayImage)
+}
+
+module.exports = Apod;
+
+// Apod.prototype.getImages = function(){
+//   var request = new Request(this.url);
+//   request.getRequest(this.fillArray.bind(this))
+// }
+//
+// Apod.prototype.fillArray = function(info){
+//     this.recentImages = info;
+// }
+//
+// Apod.prototype.imagesForSlider = function(){
+//   var imageLocation = document.querySelector('#apod-slider');
+//   this.recentImages.forEach(function(element){
+//     console.log(element);
+//     var li = document.createElement('li')
+//     var image = document.createElement('img');
+//     image.src = element.hdurl;
+//     // image.className = "sliderImage"
+//     imageLocation.appendChild(image);
+//   })
+// }
+
+
+//
+// var slideIndex = 0;
+// // carousel();
+//
+// Apod.prototype.makeSlider = function() {
+//   var ul;
+//   var liItems;
+//   var imageWidth;
+//   var imageNumber;
+//   ul = document.querySelector('#apod-slider');
+//   liItems = ul.children;
+//   imageNumber = liItems.length;
+//   imageWidth = liItems[0].children[0].offsetWidth;
+//   // set ul’s width as the total width of all images in image slider.
+//   ul.style.width = parseInt(imageWidth * imageNumber) + 'px';
+//   slider(ul);
+// }
+
 
 /***/ })
 /******/ ]);
