@@ -8,8 +8,6 @@ VideoView.prototype.videoRender = function (data, title) {
         if (!correctVideoURL.includes(substring)) {
             var correctThumbNailURL = data[data.length - 2].replace(/ /g, "%20");
             var img = document.createElement('img');
-            img.width = 320;
-            img.height = 240;
             img.src = correctThumbNailURL;
             img.onclick = function () {
                 window.location.href = correctVideoURL;
