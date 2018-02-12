@@ -29,12 +29,12 @@ const app = function () {
 
 
   let buttons = document.querySelectorAll('button');
-  for (let counter = 0; counter < buttons.length; counter++) {
-
+  for (let counter = 0; counter < buttons.length; counter++){
     if(buttons[counter].id !== 'search') {
       buttons[counter].addEventListener("click", function() {
         var newUrl = new NasaAPI(this.id)
         click.buttonClicked(newUrl, videoView);
+        click.buttonClickedImage(newUrl, videoView);
       });
     }
   };

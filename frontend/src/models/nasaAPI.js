@@ -1,16 +1,20 @@
 const Requests = require('../services/requests');
 
 const NasaAPI = function (searchData) {
-    this.url = 'https://images-api.nasa.gov/search?media_type=video&keywords=' + searchData;
-    // this.url = url;
+    this.videoUrl = 'https://images-api.nasa.gov/search?media_type=video&keywords=' + searchData;
+    this.imageUrl = 'https://images-api.nasa.gov/search?media_type=image&keywords=' + searchData;
     this.collectionURLs = [];
     this.onLoad = null;
 }
 
 NasaAPI.prototype.getCollectionURLS = function () {
-    var request = new Requests(this.url);
-    console.log(this.url);
+    var request = new Requests(this.videoUrl);
     request.getRequest(this.getHrefs.bind(this))
+}
+
+NasaAPI.prototype.getImageURLS = function () {
+    var request = new Requests(this.imageUrl)
+    request.getRequest(this.getHrefs.bind(this));
 }
 
 
@@ -18,21 +22,19 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
     var items = searchResults.collection.items;
     var hrefs = []
     items.forEach(function (item) {
-        var videoFile = {
+        var dataObject = {
             title: item.data[0].title,
             href: item.href
         }
-        hrefs.push(videoFile);
-        // hrefs.push(item.href);
-        // titles.push(item.data[0].title);
+        hrefs.push(dataObject);
     }.bind(this))
     this.getJSONData(hrefs);
 }
 
 NasaAPI.prototype.getJSONData = function (hrefs) {
-    hrefs.forEach(function (video) {
-        var request = new Requests(video.href)
-        request.getRequest(this.onLoad, video.title);
+    hrefs.forEach(function (data) {
+        var request = new Requests(data.href)
+        request.getRequest(this.onLoad, data.title);
     }.bind(this))
 }
 

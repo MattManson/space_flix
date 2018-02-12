@@ -17,4 +17,11 @@ SearchModel.prototype.buttonClicked = function(data, view){
   this.hideNonsense();
 };
 
+SearchModel.prototype.buttonClickedImage = function(data, view){
+    view.clear();
+    data.onLoad = view.render.bind(view);
+    data.getImageURLS();
+    this.hideNonsense();
+};
+
 module.exports = SearchModel;
