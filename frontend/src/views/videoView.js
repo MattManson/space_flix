@@ -25,7 +25,6 @@ VideoView.prototype.render = function (data, title) {
 };
 
 VideoView.prototype.clear = function(){
-  console.log("clear function called");
   this.container.innerText = " ";
 }
 

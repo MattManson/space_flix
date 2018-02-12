@@ -66,6 +66,22 @@ input {
   bottom: 10em;
 }
 
+#videos{
+  border: 2px solid black;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  align-items: center;
+  width: 100%;
+  height: 18em;
+  white-space: nowrap;
+}
+
+.text-block{
+  display: inline-block;
+  height: 18em;
+  width: auto;
+}
+
 /* img {
   width = 320;
   height = 240;
