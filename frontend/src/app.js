@@ -23,6 +23,7 @@ const app = function () {
 
     let enterPressed = function() {
       if (event.keyCode === 13) {
+          videoView.clear();
         var nasaAPI = new NasaAPI(videosURL + searchBox.value.replace(/ /g,"%20"));
         nasaAPI.onLoad = videoView.render.bind(videoView);
         nasaAPI.getCollectionURLS();
@@ -39,6 +40,7 @@ const app = function () {
     searchBox.addEventListener('keyup', enterPressed);
 
     let buttonClicked = function () {
+        videoView.clear();
         var nasaAPI = new NasaAPI(videosURL + this.id);
         nasaAPI.onLoad = videoView.render.bind(videoView);
         nasaAPI.getCollectionURLS();
@@ -50,7 +52,9 @@ const app = function () {
 
     let buttons = document.querySelectorAll('button');
     for (let counter = 0; counter < buttons.length; counter++) {
-      buttons[counter].addEventListener("click", buttonClicked );
+        if(buttons[counter].id !== 'search') {
+            buttons[counter].addEventListener("click", buttonClicked);
+        }
     };
 
     var apod = new Apod(apodurl);
