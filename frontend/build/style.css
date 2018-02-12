@@ -108,3 +108,7 @@ input {
 .text-block p:hover {
   opacity: 1;
 }
+
+#thumbnail{
+  width: 50em;
+}
