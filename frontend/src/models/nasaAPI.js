@@ -18,15 +18,21 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
     var items = searchResults.collection.items;
     var hrefs = []
     items.forEach(function (item) {
-        hrefs.push(item.href);
+        var videoFile = {
+            title: item.data[0].title,
+            href: item.href
+        }
+        hrefs.push(videoFile);
+        // hrefs.push(item.href);
+        // titles.push(item.data[0].title);
     }.bind(this))
     this.getJSONData(hrefs);
 }
 
 NasaAPI.prototype.getJSONData = function (hrefs) {
-    hrefs.forEach(function (url) {
-        var request = new Requests(url)
-        request.getRequest(this.onLoad);
+    hrefs.forEach(function (video) {
+        var request = new Requests(video.href)
+        request.getRequest(this.onLoad, video.title);
     }.bind(this))
 }
 
