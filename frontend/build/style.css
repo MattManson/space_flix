@@ -66,23 +66,39 @@ input {
   bottom: 10em;
 }
 
-#videos{
+#videos {
   border: 2px solid black;
   overflow-x: scroll;
   overflow-y: hidden;
   align-items: center;
   width: 100%;
-  height: 18em;
+  height: 13em;
   white-space: nowrap;
 }
 
-.text-block{
+.text-block {
   display: inline-block;
-  height: 18em;
+  /* height: 18em; */
+  overflow: hidden;
   width: auto;
 }
 
-/* img {
-  width = 320;
-  height = 240;
-} */
+.text-block img:hover {
+  opacity: 0;
+  transition: .5s linear;
+}
+
+.text-block img {
+  position: relative;
+}
+
+p {
+  margin: 0;
+  opacity: 1;
+  position: absolute;
+  height: 13em;
+}
+
+p:hover {
+  opacity: 1;
+}
