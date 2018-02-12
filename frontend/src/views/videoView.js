@@ -3,10 +3,8 @@ const VideoView = function (container) {
 }
 
 VideoView.prototype.render = function (data, title) {
-  console.log(title)
   var substring = "mov";
   var correctVideoURL = data[0].replace(/ /g,"%20");
-  // console.log(correctVideoURL);
   if (!correctVideoURL.includes(substring)){
     var correctThumbNailURL = data[data.length-2].replace(/ /g,"%20");
     var img = document.createElement('img');
@@ -18,12 +16,13 @@ VideoView.prototype.render = function (data, title) {
       window.location.href = correctVideoURL;
     };
     var titleDiv = document.createElement('div');
-    titleDiv.class = 'text-block';
+    titleDiv.className = 'text-block';
+    console.log(titleDiv.className);
     var titleP = document.createElement('p');
     titleP.innerText = title;
-    this.container.appendChild(img);
     titleDiv.appendChild(titleP);
-    this.container.appendChild(titleDiv)
+    titleDiv.appendChild(img)
+    this.container.appendChild(titleDiv);
   }
 };
 
