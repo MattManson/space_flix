@@ -1,7 +1,7 @@
 const Request = require('../services/requests');
 
-const Apod = function(url){
-  this.url = url;
+const Apod = function(){
+  this.url = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k';
   this.recentImages = [];
 }
 

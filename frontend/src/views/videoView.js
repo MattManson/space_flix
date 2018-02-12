@@ -5,7 +5,6 @@ const VideoView = function (container) {
 VideoView.prototype.render = function (data) {
   var substring = "mov";
   var correctVideoURL = data[0].replace(/ /g,"%20");
-  // console.log(correctVideoURL);
   if (!correctVideoURL.includes(substring)){
     var correctThumbNailURL = data[data.length-2].replace(/ /g,"%20");
     var img = document.createElement('img');
@@ -21,6 +20,7 @@ VideoView.prototype.render = function (data) {
 };
 
 VideoView.prototype.clear = function(){
+  console.log("clear function called");
   this.container.innerText = " ";
 }
 

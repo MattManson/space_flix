@@ -1,13 +1,15 @@
 const Requests = require('../services/requests');
 
-const NasaAPI = function (url) {
-    this.url = url;
+const NasaAPI = function (searchData) {
+    this.url = 'https://images-api.nasa.gov/search?media_type=video&keywords=' + searchData;
+    // this.url = url;
     this.collectionURLs = [];
     this.onLoad = null;
 }
 
 NasaAPI.prototype.getCollectionURLS = function () {
     var request = new Requests(this.url);
+    console.log(this.url);
     request.getRequest(this.getHrefs.bind(this))
 }
 
