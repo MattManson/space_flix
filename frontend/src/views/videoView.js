@@ -1,14 +1,13 @@
-const VideoView = function (container) {
-  this.container = container;
+const VideoView = function (videoContainer) {
+  this.videoContainer = videoContainer;
 }
 
-VideoView.prototype.render = function (data, title) {
+VideoView.prototype.videoRender = function (data, title) {
   var substring = "mov";
   var correctVideoURL = data[0].replace(/ /g,"%20");
   if (!correctVideoURL.includes(substring)){
     var correctThumbNailURL = data[data.length-2].replace(/ /g,"%20");
     var img = document.createElement('img');
-    img.src = " "
     img.width = 320;
     img.height = 240;
     img.src = correctThumbNailURL;
@@ -22,13 +21,13 @@ VideoView.prototype.render = function (data, title) {
     titleP.innerText = title;
     titleDiv.appendChild(titleP);
     titleDiv.appendChild(img)
-    this.container.appendChild(titleDiv);
+    this.videoContainer.appendChild(titleDiv);
   }
 };
 
 VideoView.prototype.clear = function(){
   console.log("clear function called");
-  this.container.innerText = " ";
+  this.videoContainer.innerText = " ";
 }
 
 module.exports = VideoView;
