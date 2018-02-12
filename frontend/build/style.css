@@ -78,9 +78,10 @@ input {
 
 .text-block {
   display: inline-block;
-  /* height: 18em; */
   overflow: hidden;
   width: auto;
+  margin-right: 0.5em;
+  position: relative;
 }
 
 .text-block img:hover {
@@ -90,15 +91,20 @@ input {
 
 .text-block img {
   position: relative;
+  transition: .5s linear;
 }
 
-p {
-  margin: 0;
+.text-block p {
+  margin: 1em;
   opacity: 1;
   position: absolute;
   height: 13em;
+  width: 16em;
+  overflow-x: visible;
+  white-space: pre-wrap;
+
 }
 
-p:hover {
+.text-block p:hover {
   opacity: 1;
 }
