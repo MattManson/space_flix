@@ -3,13 +3,14 @@ const VideoView = require('./views/videoView.js');
 const ImageView = require('./views/imageView.js');
 const Apod = require('./models/apod.js');
 const SoundNASAData = require('./models/SoundNASAData');
-const ApiKey = require('./API_key');
-const SearchModel = require('./models/search.js')
+const SearchModel = require('./models/search.js');
+const SoundView = require('./views/soundView.js');
 
 const app = function () {
 
   var videoView = new VideoView(document.querySelector('#videos'));
   var imageView = new ImageView(document.querySelector('#images'));
+  var soundView = new SoundView(document.querySelector('#sounds'));
   var search = document.querySelector('#search');
   var searchBox = document.querySelector('input');
   let click = new SearchModel();
@@ -17,7 +18,7 @@ const app = function () {
   let enterPressed = function() {
     var searchValue = searchBox.value.replace(/ /g,"%20");
     var nasaAPI = new NasaAPI(searchValue);
-      var nasaAPI2 = new NasaAPI(searchValue);
+    var nasaAPI2 = new NasaAPI(searchValue);
     if (event.keyCode === 13) {
       click.buttonClicked(nasaAPI,videoView);
       click.buttonClickedImage(nasaAPI2, imageView)
@@ -27,7 +28,7 @@ const app = function () {
   search.addEventListener('click', function() {
     var searchValue = searchBox.value.replace(/ /g,"%20");
     var nasaAPI = new NasaAPI(searchValue);
-      var nasaAPI2 = new NasaAPI(searchValue)
+    var nasaAPI2 = new NasaAPI(searchValue)
     click.buttonClicked(nasaAPI, videoView);
     click.buttonClickedImage(nasaAPI2, imageView);
   });
@@ -49,9 +50,8 @@ const app = function () {
   var apod = new Apod();
   apod.getImage();
 
-  var catrionaKey = new ApiKey().getCatrionaKey();
-  var mattKey = new ApiKey().getMattKey();
-  var soundNasaApi = new SoundNASAData('https://api.nasa.gov/planetary/sounds?q=mars&api_key=' + mattKey);
+  var soundNasaApi = new SoundNASAData();
+  soundNasaApi.showData = soundView.renderSound.bind(soundView);
   soundNasaApi.getData();
 };
 

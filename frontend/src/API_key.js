@@ -1,14 +1,9 @@
 const APIKey = function(){
-  this.catrionaKey = 'QLn3BOptgkNzClciQuNWXzwV0AsUVKOCr01MbgFk';
-  this.mattKey = "9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k";
+  this.key = 'QLn3BOptgkNzClciQuNWXzwV0AsUVKOCr01MbgFk';
 };
 
-APIKey.prototype.getCatrionaKey = function () {
-  return this.catrionaKey;
-};
-
-APIKey.prototype.getMattKey = function () {
-  return this.mattKey;
+APIKey.prototype.getKey = function () {
+  return this.key;
 };
 
 module.exports = APIKey;

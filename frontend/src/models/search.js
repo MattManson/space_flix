@@ -24,4 +24,11 @@ SearchModel.prototype.buttonClickedImage = function(data, view){
     this.hideNonsense();
 };
 
+// SearchModel.prototype.buttonClickedSound = function(data, view){
+//     view.clear();
+//     data.onLoad = view.renderSound.bind(view);
+//     // data.getImageURLS();
+//     this.hideNonsense();
+// };
+
 module.exports = SearchModel;

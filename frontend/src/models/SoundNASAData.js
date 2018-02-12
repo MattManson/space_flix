@@ -1,16 +1,15 @@
 const Request = require('../services/requests.js');
+const ApiKey = require('../API_key');
 
-const SoundNASAData = function(url) {
-  this.videoUrl = url;
+const SoundNASAData = function() {
+  this.key = new ApiKey().getKey();
+  this.url = 'https://api.nasa.gov/planetary/sounds?q=mars&api_key=' + this.key;
+  this.showData = null;
 }
 
 SoundNASAData.prototype.getData = function() {
-  let request = new Request(this.videoUrl);
+  let request = new Request(this.url);
   request.getRequest(this.showData);
-};
-
-SoundNASAData.prototype.showData = function(data) {
-  console.log(data.items);
 };
 
 module.exports = SoundNASAData;
