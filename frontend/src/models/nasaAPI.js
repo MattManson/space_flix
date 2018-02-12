@@ -3,7 +3,6 @@ const Requests = require('../services/requests');
 const NasaAPI = function (searchData) {
     this.videoUrl = 'https://images-api.nasa.gov/search?media_type=video&keywords=' + searchData;
     this.imageUrl = 'https://images-api.nasa.gov/search?media_type=image&keywords=' + searchData;
-    this.collectionURLs = [];
     this.onLoad = null;
 }
 
@@ -32,10 +31,14 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
 }
 
 NasaAPI.prototype.getJSONData = function (hrefs) {
-    hrefs.forEach(function (data) {
-        var request = new Requests(data.href)
-        request.getRequest(this.onLoad, data.title);
-    }.bind(this))
+    for(var i = 0; i < 20; i++){
+        var request = new Requests(hrefs[i].href);
+        request.getRequest(this.onLoad, hrefs[i].title);
+    }
+    // hrefs.forEach(function (data) {
+    //     var request = new Requests(data.href)
+    //     request.getRequest(this.onLoad, data.title);
+    // }.bind(this))
 }
 
 module.exports = NasaAPI;
