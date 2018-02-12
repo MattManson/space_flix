@@ -65,3 +65,26 @@ input {
   position: relative;
   bottom: 10em;
 }
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/*#bottom-left {*/
+  /*position: absolute;*/
+  /*bottom: 8px;*/
+  /*left: 16px;*/
+/*}*/
+
+/*#test-videos {*/
+  /*position: relative;*/
+  /*text-align: center;*/
+  /*color: white;*/
+/*}*/
