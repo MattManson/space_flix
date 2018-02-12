@@ -12,9 +12,16 @@ SearchModel.prototype.hideNonsense = function () {
 
 SearchModel.prototype.buttonClicked = function(data, view){
   view.clear();
-  data.onLoad = view.render.bind(view);
+  data.onLoad = view.videoRender.bind(view);
   data.getCollectionURLS();
   this.hideNonsense();
+};
+
+SearchModel.prototype.buttonClickedImage = function(data, view){
+    view.clear();
+    data.onLoad = view.imageRender.bind(view);
+    data.getImageURLS();
+    this.hideNonsense();
 };
 
 module.exports = SearchModel;

@@ -1,7 +1,7 @@
 const Request = require('../services/requests');
 
 const Apod = function(){
-  this.url = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k';
+  this.videoUrl = 'https://api.nasa.gov/planetary/apod?api_key=9AsiGWIMkVlJVOoljVmpT2mNvJNFPHSL1ZdTa74k';
   this.recentImages = [];
 }
 
@@ -14,7 +14,7 @@ Apod.prototype.displayImage = function(imageDetails) {
 }
 
 Apod.prototype.getImage = function(){
-  var request = new Request(this.url);
+  var request = new Request(this.videoUrl);
   request.getRequest(this.displayImage)
 }
 

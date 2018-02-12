@@ -1,11 +1,11 @@
 const Request = require('../services/requests.js');
 
 const SoundNASAData = function(url) {
-  this.url = url;
+  this.videoUrl = url;
 }
 
 SoundNASAData.prototype.getData = function() {
-  let request = new Request(this.url);
+  let request = new Request(this.videoUrl);
   request.getRequest(this.showData);
 };
 
