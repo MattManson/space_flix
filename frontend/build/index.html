@@ -25,31 +25,41 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    var popupWindow = document.querySelector('#popup_bg');
+</container>
+<script type="text/javascript">
+var popupWindow = document.querySelector('#popup_bg');
 
-    function closePopup(){
-      popupWindow.style.display = 'none';
-    }
-  </script>
+function closePopup(){
+  popupWindow.style.display = 'none';
+}
+</script>
 
-  <container class="visble" id="front-page">
-    <div id="apod-slider"></div>
-    <button id="jupiter">JUPITER</button>
-    <button id="saturn">SATURN</button>
-    <button id="earth">EARTH</button>
-    <button id="venus">VENUS</button>
-    <button id="mars">MARS</button>
-    <button id="neptune">NEPTUNE</button>
-  </container>
+<container class="visble" id="front-page">
+  <div id="apod-slider"></div>
+  <button id="jupiter">JUPITER</button>
+  <button id="saturn">SATURN</button>
+  <button id="earth">EARTH</button>
+  <button id="venus">VENUS</button>
+  <button id="mars">MARS</button>
+  <button id="neptune">NEPTUNE</button>
+</container>
 
-  <container class="invisible" id="view-page">
-    <div id="videos">
-      <h2>Videos</h2>
-    </div>
-    <div id="images">
-      <h2>Images</h2>
-    </div>
-  </container>
+<container class="invisible" id="view-page">
+  <div id="videos">
+    <h2>Videos</h2>
+  </div>
+  <div id="images">
+    <h2>Images</h2>
+  </div>
+</container>
+
+<container class="invisible" id="view-media">
+  <div id="show-media">
+    <img id="thumbnail">
+    <p id="title"></p>
+    <p id="description"></p>
+    <button id="favourites-button">Add to Favourites</button>
+  </div>
+</container>
 </body>
 </html>
