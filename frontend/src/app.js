@@ -13,6 +13,10 @@ const app = function () {
   var search = document.querySelector('#search');
   var searchBox = document.querySelector('input');
   let click = new SearchModel();
+  var closePopup = document.querySelector("#close_popup")
+  closePopup.addEventListener('click', function(){
+    videoView.closePopup();
+  });
 
   let enterPressed = function() {
     var searchValue = searchBox.value.replace(/ /g,"%20");
