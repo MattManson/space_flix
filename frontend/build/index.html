@@ -1,48 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>SpaceFlix</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="bundle.js"></script>
-  </head>
-  <body>
-    <header>
-      <a href = "http://localhost:3000/" id="test">HOME</a>
-      <h1>SPAAAAAAAAAAAAACEFLIX</h1>
-      <div>
-        <input type="text">
-        <button type="submit" id="search">Go</button>
-      </div>
-    </header>
 
-    <container class="visble" id="front-page">
+<head>
+  <meta charset="UTF-8">
+  <title>SpaceFlix</title>
+  <link rel="stylesheet" href="public/videos.css">
+  <link rel="stylesheet" href="public/main.css">
+  <link rel="stylesheet" href="public/popup.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans" rel="stylesheet">
+  <script src="bundle.js"></script>
+</head>
+<body>
+  <header>
+    <a href = "http://localhost:3000/" id="test">HOME</a>
+    <h1>SPACEFLIX</h1>
+    <div>
+      <input type="text">
+      <button type="submit" id="search">Go</button>
+    </div>
+  </header>
+
+
+
+  <container class="visble" id="front-page">
+    <div class="ImageAndTextContainer">
       <div id="apod-slider"></div>
-      <button id="jupiter">JUPITER</button>
-      <button id="saturn">SATURN</button>
-      <button id="earth">EARTH</button>
-      <button id="venus">VENUS</button>
-      <button id="mars">MARS</button>
-      <button id="neptune">NEPTUNE</button>
-        <a id="favourites">FAVOURITES</a>
-    </container>
+      <div id="bottom-left"></div>
+    </div>
+    <button id="jupiter">JUPITER</button>
+    <button id="saturn">SATURN</button>
+    <button id="earth">EARTH</button>
+    <button id="venus">VENUS</button>
+    <button id="mars">MARS</button>
+    <button id="neptune"><img src="public/images/planets/neptune.png"/>NEPTUNE</button>
+    <button id="space-sounds">Play Space Sound</button>
+      <a id="favourites">FAVOURITES</a>
+  </container>
 
-    <container class="invisible" id="view-page">
+  <container class="invisible" id="view-page">
+    <div id="videos">
       <h2>Videos</h2>
-      <div id="videos">
-      </div>
+    </div>
+    <div id="images">
       <h2>Images</h2>
-      <div id="images">
-      </div>
+    </div>
     </container>
 
-    <container class="invisible" id="view-media">
-      <div id="show-media">
-        <img id="thumbnail">
-        <p id="title"></p>
-        <p id="description"></p>
-        <a id="add-to-favourites-button">Add to Favourites</a>
-      </div>
-    </container>
-  </body>
-</html>
+
+          <container class="invisible" id="view-media">
+            <div id="show-media">
+              <img id="thumbnail">
+              <p id="title"></p>
+              <p id="description"></p>
+              <button id="favourites-button">Add to Favourites</button>
+            </div>
+          </container>
+
+          <div id="popup_bg">
+            <div id="popup_main">
+              <div id="popup_contents" style='position: relative; width: 600px; height: 0px; padding-bottom: 60%;'>
+              </div>
+              <div id="close_popup" title="close this window">
+                <p>
+                  <font color="white">X</font>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+      </body>
+      </html>

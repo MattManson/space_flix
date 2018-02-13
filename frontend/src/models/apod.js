@@ -8,9 +8,13 @@ const Apod = function(){
 Apod.prototype.displayImage = function(imageDetails) {
   console.log(imageDetails);
   var imageLocation = document.querySelector('#apod-slider');
+  var divDetails = document.querySelector('#bottom-left');
   var apodImage = document.createElement('img');
+  var apodDetails = document.createElement('p');
   apodImage.src = imageDetails.hdurl;
+  apodDetails.innerText = 'Image of The Day : ' + imageDetails.title;
   imageLocation.appendChild(apodImage);
+  divDetails.appendChild(apodDetails);
 }
 
 Apod.prototype.getImage = function(){
