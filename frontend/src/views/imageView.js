@@ -2,7 +2,27 @@ const ImageView = function (imageContainer) {
     this.imageContainer = imageContainer;
 }
 
-ImageView.prototype.imageRender = function (data, title) {
+ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailURL, dataObject) {
+    let frontPageContainer = document.querySelector('#front-page');
+    frontPageContainer.className = 'invisible';
+    let viewPageContainer= document.querySelector('#view-page');
+    viewPageContainer.className = 'invisible';
+    let viewMediaContainer= document.querySelector('#view-media');
+    viewMediaContainer.className = 'visible';
+    var imgThumbNail = document.querySelector('#thumbnail');
+    console.log(correctThumbnailURL);
+    imgThumbNail.src = correctThumbnailURL;
+    imgThumbNail.onclick = function () {
+        window.location.href = correctImageURL;
+    };
+    var title = document.querySelector('#title');
+    title.innerText = dataObject.title;
+    var description = document.querySelector('#description');
+    description.innerText = dataObject.description;
+
+}
+
+ImageView.prototype.imageRender = function (data, dataObject) {
     var correctImageURL = data[0].replace(/ /g,"%20");
     var correctThumbNailURL = data[data.length-2].replace(/ /g,"%20");
     var img = document.createElement('img');
@@ -10,13 +30,13 @@ ImageView.prototype.imageRender = function (data, title) {
     img.height = 240;
     img.src = correctThumbNailURL;
     img.onclick = function() {
-        window.location.href = correctImageURL;
-    };
+        this.showThumbnail(correctImageURL, correctThumbNailURL, dataObject);
+    }.bind(this);
     var titleDiv = document.createElement('div');
     titleDiv.className = 'text-block';
     console.log(titleDiv.className);
     var titleP = document.createElement('p');
-    titleP.innerText = title;
+    titleP.innerText = dataObject.title;
     titleDiv.appendChild(titleP);
     titleDiv.appendChild(img)
     this.imageContainer.appendChild(titleDiv);

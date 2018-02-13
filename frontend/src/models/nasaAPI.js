@@ -23,9 +23,11 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
     items.forEach(function (item) {
         var dataObject = {
             title: item.data[0].title,
+            description: item.data[0].description,
             href: item.href
         }
         hrefs.push(dataObject);
+        console.log(dataObject);
     }.bind(this))
     this.getJSONData(hrefs);
 }
@@ -33,7 +35,7 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
 NasaAPI.prototype.getJSONData = function (hrefs) {
     for(var i = 0; i < 20; i++){
         var request = new Requests(hrefs[i].href);
-        request.getRequest(this.onLoad, hrefs[i].title);
+        request.getRequest(this.onLoad, hrefs[i]);
     }
     // hrefs.forEach(function (data) {
     //     var request = new Requests(data.href)

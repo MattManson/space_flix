@@ -2,7 +2,7 @@ const Request = function (url) {
     this.url = url;
 }
 
-Request.prototype.getRequest = function(callback, title) {
+Request.prototype.getRequest = function(callback, dataObject) {
     var request = new XMLHttpRequest();
     request.open('GET', this.url);
     request.addEventListener('load', function () {
@@ -10,7 +10,7 @@ Request.prototype.getRequest = function(callback, title) {
             return;
         }
         const responseBody = JSON.parse(this.responseText);
-        callback(responseBody, title);
+        callback(responseBody, dataObject);
     });
     request.send();
 }
