@@ -19,9 +19,9 @@ header {
   font-family: 'Abel', sans-serif;
 }
 
-a {
+#home {
   display: block;
-  color: orange;
+  background-color: rgb(240, 234, 220);
   width: 5em;
   padding: 0.2em;
   text-decoration: none;
@@ -29,9 +29,19 @@ a {
   border-radius: 0.2em;
 }
 
+/* a {
+  display: block;
+  color: orange;
+  width: 5em;
+  padding: 0.2em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.2em;
+} */
+
 #home:hover {
  background-color: rgb(187, 124, 62);
- color: white;
+ color: rgb(240, 234, 220);
 }
 
 div {
@@ -93,4 +103,24 @@ input {
   color: white;
   opacity: 1;
   transition: .5s linear;
+}
+
+#front-page h3 {
+  font-family: 'Abel', sans-serif;
+  margin-left: 1em;
+  margin-top: 2em;
+  background-color: rgb(240, 234, 220);
+  padding: 0.4em;
+  width: 7em;
+  text-align: center;
+  color: rgb(41, 43, 46);
+  border-radius: 0.2em;
+}
+
+#front-page h2 {
+  font-family: 'Abel', sans-serif;
+  margin-top: 0;
+  margin-left: 1.9em;
+  width: 10em;
+  color: rgb(41, 43, 46);
 }

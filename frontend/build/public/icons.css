@@ -4,6 +4,7 @@
 
 #not-planets{
   margin: 2em;
+  justify-content: center;
 }
 
 #index{
@@ -12,6 +13,7 @@
 
 index a {
   display: inline-block;
+  font-family: 'Open Sans', sans-serif;
   color: orange;
   width: 5em;
   padding: 0.2em;
