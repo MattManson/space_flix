@@ -9,6 +9,7 @@ body {
 
 header {
   display: flex;
+  position: relative;
   background-color: rgb(41, 43, 46);
   width: 100%;
   justify-content: space-around;
@@ -27,6 +28,7 @@ h1 {
   justify-content: center;
   text-align: center;
   margin: 0;
+  font-family: 'Abel', sans-serif;
 }
 
 a {
