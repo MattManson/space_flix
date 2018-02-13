@@ -11,3 +11,9 @@
 #space-sound-frame {
   width: 70em;
 }
+
+#sounds p{
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  margin-top: 2em;
+}

@@ -11,7 +11,10 @@ SoundView.prototype.renderSound = function(data) {
   let iframe = document.createElement('iframe');
   iframe.src = 'https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/' + soundClip.id;
   iframe.id = "space-sound-frame";
+  let pTag = document.createElement('p');
+  pTag.innerText = soundClip.description;
   this.soundContainer.appendChild(iframe);
+  this.soundContainer.appendChild(pTag);
 };
 
 SoundView.prototype.pickSound = function() {
