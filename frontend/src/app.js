@@ -1,5 +1,6 @@
 const NasaAPI = require('./models/nasaAPI');
 const VideoView = require('./views/videoView.js');
+const FavouriteVideoView = require('./views/favouriteVideoView');
 const ImageView = require('./views/imageView.js');
 const Apod = require('./models/apod.js');
 const Favourites = require('./models/favourites.js');
@@ -10,6 +11,7 @@ const SoundView = require('./views/soundView.js');
 const app = function () {
 
   var videoView = new VideoView(document.querySelector('#videos'));
+  var favouriteVideoView = new FavouriteVideoView(document.querySelector('#favourite-videos'));
   var imageView = new ImageView(document.querySelector('#images'));
   var favouritesButton = document.querySelector('#favourites');
   var soundView = new SoundView(document.querySelector('#sounds'));
@@ -33,7 +35,7 @@ const app = function () {
 
   favouritesButton.addEventListener('click', function () {
       var favourites = new Favourites();
-      click.favouritesButtonClicked(favourites, videoView);
+      click.favouritesButtonClicked(favourites, favouriteVideoView);
   });
 
 

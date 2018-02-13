@@ -10,5 +10,20 @@ Favourites.prototype.getFavourites = function () {
     request.getRequest(this.onLoad);
 }
 
+Favourites.prototype.addToFavourites = function (event, correctVideoURL, correctThumbnailURL, dataObject) {
+    event.preventDefault();
+    const body = {
+        title: dataObject.title,
+        description: dataObject.description,
+        href: correctVideoURL,
+        thumbnail: correctThumbnailURL
+    }
+    const createRequestComplete = function () {
+        this.getFavourites();
+    }.bind(this);
+    var request = new Request(this.url);
+    request.post(createRequestComplete, body);
+}
+
 
 module.exports = Favourites;
