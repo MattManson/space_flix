@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>SpaceFlix</title>
-    <link rel="stylesheet" href="public/videos.css">
-    <link rel="stylesheet" href="public/main.css">
-    <link rel="stylesheet" href="public/popup.css">
-    <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans" rel="stylesheet">
-    <script src="bundle.js"></script>
-  </head>
-  <body>
-    <header>
-      <a href = "http://localhost:3000/" id="test">HOME</a>
-      <h1>SPACEFLIX</h1>
-      <div>
-        <input type="text">
-        <button type="submit" id="search">Go</button>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>SpaceFlix</title>
+  <link rel="stylesheet" href="public/videos.css">
+  <link rel="stylesheet" href="public/main.css">
+  <link rel="stylesheet" href="public/popup.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans" rel="stylesheet">
+  <script src="bundle.js"></script>
+</head>
+<body>
+  <header>
+    <a href = "http://localhost:3000/" id="test">HOME</a>
+    <h1>SPACEFLIX</h1>
+    <div>
+      <input type="text">
+      <button type="submit" id="search">Go</button>
+    </div>
+  </header>
+  <container class="visble" id="front-page">
+    <div class="ImageAndTextContainer">
+      <div id="apod-slider"></div>
+      <div id="bottom-left"></div>
+    </div>
+    <button class="planet-icons" id="moon"/><img src="public/images/planets/big-moon.png">MOON</button>
+    <button class="planet-icons" id="jupiter"/><img src="public/images/planets/jupiter-with-satellite.png">JUPITER</button>
+    <button class="planet-icons" id="saturn"/><img src="public/images/planets/saturn.png">SATURN</button>
+    <button class="planet-icons" id="venus"/><img src="public/images/planets/venus-with-satellite.png">VENUS</button>
+    <button class="planet-icons" id="mars"/><img src="public/images/planets/mars-with-satellite.png">MARS</button>
+    <button class="planet-icons" id="neptune"/><img src="public/images/planets/neptune-with-satellite.png">NEPTUNE</button>
+    <button class="planet-icons" id="uranus"/><img src="public/images/planets/uranus-with-satellite.png">URANUS</button>
+    <button class="planet-icons" id="space-sounds">Play Space Sound</button>
+  </container>
 
-    <container class="visble" id="front-page">
-      <div class="ImageAndTextContainer">
-        <div id="apod-slider"></div>
-        <div id="bottom-left"></div>
-      </div>
-      <button class="planet-icons" id="moon"/><img src="public/images/planets/big-moon.png">MOON</button>
-      <button class="planet-icons" id="jupiter"/><img src="public/images/planets/jupiter-with-satellite.png">JUPITER</button>
-      <button class="planet-icons" id="saturn"/><img src="public/images/planets/saturn.png">SATURN</button>
-      <button class="planet-icons" id="venus"/><img src="public/images/planets/venus-with-satellite.png">VENUS</button>
-      <button class="planet-icons" id="mars"/><img src="public/images/planets/mars-with-satellite.png">MARS</button>
-      <button class="planet-icons" id="neptune"/><img src="public/images/planets/neptune-with-satellite.png">NEPTUNE</button>
-      <button class="planet-icons" id="uranus"/><img src="public/images/planets/uranus-with-satellite.png">URANUS</button>
-      <button class="planet-icons" id="space-sounds">Play Space Sound</button>
-    </container>
+  <container class="invisible" id="view-page">
+    <div id="videos">
+      <h2>Videos</h2>
+    </div>
+    <div id="images">
+      <h2>Images</h2>
+    </div>
 
-    <container class="invisible" id="view-page">
-      <div id="videos">
-        <h2>Videos</h2>
-      </div>
-      <div id="images">
-        <h2>Images</h2>
-      </div>
-      <div id="popup_bg">
-        <div id="popup_main">
-          <div id="popup_contents">
-            <div id="close_popup" title="close this window">
-              <p>X</p>
+
+
+
+          <container class="invisible" id="view-media">
+            <div id="show-media">
+              <img id="thumbnail">
+              <p id="title"></p>
+              <p id="description"></p>
+              <button id="favourites-button">Add to Favourites</button>
+            </div>
+          </container>
+
+          <div id="popup_bg">
+            <div id="popup_main">
+              <div id="popup_contents" style='position: relative; width: 600px; height: 0px; padding-bottom: 60%;'>
+              </div>
+              <div id="close_popup" title="close this window">
+                <p>
+                  <font color="white">X</font>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <script type="text/javascript">
-        var popupWindow = document.querySelector('#popup_bg');
 
-        function closePopup(){
-          popupWindow.style.display = 'none';
-        }
-      </script>
-    </container>
 
-    <container class="invisible" id="view-media">
-      <div id="show-media">
-        <img id="thumbnail">
-        <p id="title"></p>
-        <p id="description"></p>
-        <button id="favourites-button">Add to Favourites</button>
-      </div>
-    </container>
-  </body>
-</html>
+      </body>
+      </html>

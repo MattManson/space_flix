@@ -27,7 +27,6 @@ NasaAPI.prototype.getHrefs = function (searchResults) {
             href: item.href
         }
         hrefs.push(dataObject);
-        console.log(dataObject);
     }.bind(this))
     this.getJSONData(hrefs);
 }
