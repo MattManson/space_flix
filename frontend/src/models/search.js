@@ -10,11 +10,20 @@ SearchModel.prototype.hideNonsense = function () {
   viewPageContainer.className = 'visible';
 };
 
+SearchModel.prototype.hideViewPage = function () {
+    let frontPageContainer = document.querySelector('#front-page');
+    frontPageContainer.className = 'invisible';
+    let viewPageContainer= document.querySelector('#view-page');
+    viewPageContainer.className = 'invisible';
+    let favouritesPage = document.querySelector('#favourites-page');
+    favouritesPage.className = 'visible';
+}
+
 SearchModel.prototype.favouritesButtonClicked = function (data, view) {
     view.clear();
     data.onLoad = view.videoRenderFavourites.bind(view);
     data.getFavourites();
-    this.hideNonsense();
+    this.hideViewPage();
 }
 
 SearchModel.prototype.buttonClicked = function(data, view){
