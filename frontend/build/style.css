@@ -66,6 +66,27 @@ input {
   bottom: 10em;
 }
 
+.ImageAndTextContainer{
+    position: relative;
+    text-align: center;
+}
+
+#bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  opacity: 0;
+  transition: .5s linear;
+}
+
+.ImageAndTextContainer:hover #bottom-left{
+  color: white;
+  opacity: 1;
+  transition: .5s linear;
+}
+
+
+
 #videos {
   border: 2px solid black;
   overflow-x: scroll;
