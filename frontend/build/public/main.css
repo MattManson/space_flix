@@ -8,14 +8,14 @@ body {
 }
 
 header {
-  display: flex;
+  display: inline-flex;
   position: relative;
   background-color: rgb(41, 43, 46);
   width: 100%;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: center;
   padding-top: 1em;
-  padding-bottom: 1.2em;
+  padding-bottom: 1em;
   font-family: 'Abel', sans-serif;
 }
 
@@ -42,11 +42,17 @@ header {
 #home:hover {
  background-color: rgb(187, 124, 62);
  color: rgb(240, 234, 220);
+ border: none;
 }
 
-div {
-  display: inline-block;
+#search:hover {
+  background-color: rgb(187, 124, 62);
+  color: rgb(240, 234, 220);
 }
+
+/* div {
+  display: inline-block;
+} */
 
 h1 {
   color: white;
@@ -55,18 +61,10 @@ h1 {
   margin: 0;
   font-family: 'Abel', sans-serif;
 }
-button {
-  border-radius: 0.2em;
-}
-
-button:hover {
-  background-color: rgb(187, 124, 62);
-  color: white;
-  border: none;
-}
 
 input {
   border-radius: 0.5em;
+  width: 20em;
 }
 
 #apod-slider {
@@ -105,22 +103,14 @@ input {
   transition: .5s linear;
 }
 
-#front-page h3 {
-  font-family: 'Abel', sans-serif;
-  margin-left: 1em;
-  margin-top: 2em;
-  background-color: rgb(240, 234, 220);
-  padding: 0.4em;
-  width: 7em;
-  text-align: center;
-  color: rgb(41, 43, 46);
-  border-radius: 0.2em;
+#bottom-left p {
+  margin: 0;
 }
 
 #front-page h2 {
   font-family: 'Abel', sans-serif;
   margin-top: 0;
   margin-left: 1.9em;
-  width: 10em;
+  width: 30em;
   color: rgb(41, 43, 46);
 }

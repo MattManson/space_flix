@@ -1,5 +1,8 @@
 #planet-icons{
   margin: 2em;
+  background-color: rgb(240, 234, 220);
+  padding: 0.5em 1.3em 1.3em 1.3em;
+  border-radius: 0.2em;
 }
 
 #not-planets{
@@ -11,7 +14,7 @@
   margin: 2em;
 }
 
-index a {
+#index a {
   display: inline-block;
   font-family: 'Open Sans', sans-serif;
   color: orange;
@@ -25,30 +28,45 @@ index a {
   margin: 2em;
 }
 
-index a:hover {
- background-color: rgb(187, 124, 62);
+#index a:hover {
+ /* background-color: rgb(187, 124, 62); */
  color: white;
 }
 
-a img{
+#index a img{
   width: 10em;
   height: 10em;
 }
 
-.planet-icons{
+.planet-icons {
   border-radius: 0.2em;
   background: transparent;
   border: none;
   width: 10em;
   height: 10em;
-  margin: 2em;
-  color: orange;
+  margin: 0.08em;
+  font-family: 'Open Sans', sans-serif;
+  /* color: orange; */
   text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
 }
 
 .planet-icons img{
-  width: 10em;
-  height: 10em;
+  width: 7em;
+  height: 7em;
+  margin-bottom: 0.8em;
+}
+
+.planet-icons:hover {
+  background-color: rgb(221, 124, 62);
+  color: rgb(240, 234, 220);
+  border-radius: 2em;
+  padding: 0.4em;
+}
+
+#mars {
+  padding: 0.4em;
 }
 
 .not-planet-icons{
@@ -66,4 +84,12 @@ a img{
 .not-planet-icons img{
   width: 10em;
   height: 10em;
+}
+
+#front-page h3 {
+  font-family: 'Abel', sans-serif;
+  background-color: rgb(240, 234, 220);
+  text-align: center;
+  color: rgb(41, 43, 46);
+  font-size: 1.8em;
 }
