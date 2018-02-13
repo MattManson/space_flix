@@ -1,5 +1,10 @@
+#view-page h2 {
+  font-family: 'Abel', sans-serif;
+  margin-left: 1em;
+  margin-top: 2em;
+}
+
 #videos {
-  border: 2px solid black;
   overflow-x: scroll;
   overflow-y: hidden;
   align-items: center;
@@ -9,7 +14,6 @@
 }
 
 #images {
-  border: 2px solid black;
   overflow-x: scroll;
   overflow-y: hidden;
   align-items: center;
@@ -19,6 +23,7 @@
 }
 
 .text-block {
+  background-color: rgb(240, 234, 220);
   display: inline-block;
   overflow: hidden;
   width: auto;

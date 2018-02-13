@@ -6,13 +6,16 @@
   <link rel="stylesheet" href="public/videos.css">
   <link rel="stylesheet" href="public/main.css">
   <link rel="stylesheet" href="public/popup.css">
+
   <link rel="stylesheet" href="public/icons.css">
+  <link rel="stylesheet" href="public/sounds.css">
+
   <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans" rel="stylesheet">
   <script src="bundle.js"></script>
 </head>
 <body>
   <header>
-    <a href = "http://localhost:3000/" id="test">HOME</a>
+    <a href = "http://localhost:3000/" id="home">HOME</a>
     <h1>SPACEFLIX</h1>
     <div>
       <input type="text">
@@ -25,6 +28,7 @@
       <div id="apod-slider"></div>
       <div id="bottom-left"></div>
     </div>
+<<<<<<< HEAD
     <button class="planet-icons" id="jupiter"><img src="public/images/planets/jupiter-with-satellite.png"/>JUPITER</button>
     <button class="planet-icons" id="moon"><img src="public/images/planets/big-moon.png"/>MOON</button>
     <button class="planet-icons" id="saturn"><img src="public/images/planets/saturn.png"/>SATURN</button>
@@ -34,16 +38,24 @@
     <button class="planet-icons" id="neptune"><img src="public/images/planets/neptune-with-satellite.png"/>NEPTUNE</button>
     <button id="space-sounds">Play Space Sound</button>
       <a id="favourites">FAVOURITES</a>
+=======
+    <button id="jupiter">JUPITER</button>
+    <button id="saturn">SATURN</button>
+    <button id="earth">EARTH</button>
+    <button id="venus">VENUS</button>
+    <button id="mars">MARS</button>
+    <button id="neptune"><img src="public/images/planets/neptune.png"/>NEPTUNE</button>
+    <a id="space-sounds">Play Space Sound</a>
+    <a id="favourites">FAVOURITES</a>
+>>>>>>> develop
   </container>
 
   <container class="invisible" id="view-page">
-    <div id="videos">
-      <h2>Videos</h2>
-    </div>
-    <div id="images">
-      <h2>Images</h2>
-    </div>
-    </container>
+    <h2>VIDEOS</h2>
+    <div id="videos"></div>
+    <h2>IMAGES</h2>
+    <div id="images"></div>
+  </container>
 
   <container class="invisible" id="view-media">
     <div id="show-media">
@@ -51,6 +63,12 @@
       <p id="title"></p>
       <p id="description"></p>
       <button id="favourites-button">Add to Favourites</button>
+    </div>
+  </container>
+
+  <container class="invisible" id="sound-page">
+    <div id="sounds">
+      <h1>SOUNDS</h1>
     </div>
   </container>
 
@@ -65,7 +83,6 @@
       </div>
     </div>
   </div>
-
 
 </body>
 </html>

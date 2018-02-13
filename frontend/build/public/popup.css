@@ -1,114 +1,3 @@
-body {
-  margin: 0;
-}
-
-header {
-  display: flex;
-  background-color: black;
-  width: 100%;
-  justify-content: space-around;
-  align-items: baseline;
-  padding-top: 1em;
-  padding-bottom: 1.2em;
-}
-
-div {
-  display: inline-block;
-}
-
-h1 {
-  color: white;
-  justify-content: center;
-  text-align: center;
-  margin: 0;
-}
-
-a {
-  display: block;
-  color: black;
-  width: 5em;
-  background-color: white;
-  padding: 0.2em;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.2em;
-}
-
-a:hover {
- background-color: blue;
- color: white;
-}
-
- button:hover {
-  background-color: blue;
-  color: white;
-}
-
-input {
-  border-radius: 0.5em;
-}
-
-.invisible{
-  display: none;
-}
-
-#apod-slider {
-  display: grid;
-  justify-content: center;
-  height: 30em;
-  width: 100%;
-  overflow: hidden;
-}
-
-#apod-slider img {
-  width: 100%;
-  position: relative;
-  bottom: 10em;
-}
-
-#videos {
-  border: 2px solid black;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  align-items: center;
-  width: 100%;
-  height: 13em;
-  white-space: nowrap;
-}
-
-.text-block {
-  display: inline-block;
-  overflow: hidden;
-  width: auto;
-  margin-right: 0.5em;
-  position: relative;
-}
-
-.text-block img:hover {
-  opacity: 0;
-  transition: .5s linear;
-}
-
-.text-block img {
-  position: relative;
-  transition: .5s linear;
-}
-
-.text-block p {
-  margin: 1em;
-  opacity: 1;
-  position: absolute;
-  height: 13em;
-  width: 16em;
-  overflow-x: visible;
-  white-space: pre-wrap;
-
-}
-
-.text-block p:hover {
-  opacity: 1;
-}
-
 #popup_bg {
   position: fixed;
   top: 0;
@@ -120,7 +9,6 @@ input {
 }
 
 #popup_main {
-  /* position: relative; */
   width: 600px;
   height: 337px;
   border: 2px solid black;
@@ -130,27 +18,26 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
-#close_popup{
+#close_popup {
   position: absolute;
   width: 25px;
   height: 25px;
-  /* border-radius: 25px;
-  border: 2px solid white; */
   text-align: center;
   text-decoration-color: white;
   right: 5px;
   top: 5px;
   cursor: pointer;
 }
-#close_popup p{
+
+#close_popup p {
   margin-top: 5px;
   font-family: sans-serif;;
   font-weight: bold;
 }
-#popup_contents{
+
+#popup_contents {
   width: 350px;
   height: 230px;
 }
