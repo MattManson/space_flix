@@ -41,16 +41,17 @@ const app = function () {
       buttons[counter].addEventListener("click", function() {
         var newUrl1 = new NasaAPI(this.id);
         var newUrl2 = new NasaAPI(this.id);
-        var soundNasaApi = new SoundNASAData(this.id);
         click.buttonClicked(newUrl1, videoView);
         click.buttonClickedImage(newUrl2, imageView);
-        click.buttonClickedSound(soundNasaApi, soundView);
       });
     }
   };
 
-
-
+  let soundButton = document.querySelector('#space-sounds');
+  soundButton.addEventListener('click', function() {
+    let soundNasaApi = new SoundNASAData();
+    click.buttonClickedSound(soundNasaApi, soundView);
+  });
 
   var apod = new Apod();
   apod.getImage();

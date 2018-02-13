@@ -6,7 +6,7 @@ const SearchModel = function(){
 SearchModel.prototype.hideNonsense = function () {
   let frontPageContainer = document.querySelector('#front-page');
   frontPageContainer.className = 'invisible';
-  let viewPageContainer= document.querySelector('#view-page');
+  let viewPageContainer = document.querySelector('#view-page');
   viewPageContainer.className = 'visible';
 };
 
@@ -25,10 +25,12 @@ SearchModel.prototype.buttonClickedImage = function(data, view){
 };
 
 SearchModel.prototype.buttonClickedSound = function(data, view){
-  view.clear();
   data.showData = view.renderSound.bind(view);
   data.getData();
-  this.hideNonsense();
+  let frontPageContainer = document.querySelector('#front-page');
+  frontPageContainer.className = 'invisible';
+  let viewPageContainer = document.querySelector('#sound-page');
+  viewPageContainer.className = 'visible';
 };
 
 module.exports = SearchModel;
