@@ -16,16 +16,29 @@
         <button type="submit" id="search">Go</button>
       </div>
     </header>
-      <div id="popup_bg">
-        <div id="popup_main">
-          <div id="popup_contents">
-          </div>
+
+    <container class="visble" id="front-page">
+      <div class="ImageAndTextContainer">
+        <div id="apod-slider"></div>
+        <div id="bottom-left"></div>
+      </div>
+      <button id="jupiter">JUPITER</button>
+      <button id="saturn">SATURN</button>
+      <button id="earth">EARTH</button>
+      <button id="venus">VENUS</button>
+      <button id="mars">MARS</button>
+      <button id="neptune">NEPTUNE</button>
+    </container>
+
+    <div id="popup_bg">
+      <div id="popup_main">
+        <div id="popup_contents">
           <div id="close_popup" title="close this window">
             <p>X</p>
           </div>
         </div>
       </div>
-    </container>
+    </div>
     <script type="text/javascript">
     var popupWindow = document.querySelector('#popup_bg');
 
