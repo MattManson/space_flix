@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="public/videos.css">
   <link rel="stylesheet" href="public/main.css">
   <link rel="stylesheet" href="public/popup.css">
+  <link rel="stylesheet" href="public/sounds.css">
   <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans" rel="stylesheet">
   <script src="bundle.js"></script>
 </head>
@@ -20,8 +21,6 @@
     </div>
   </header>
 
-
-
   <container class="visble" id="front-page">
     <div class="ImageAndTextContainer">
       <div id="apod-slider"></div>
@@ -33,8 +32,8 @@
     <button id="venus">VENUS</button>
     <button id="mars">MARS</button>
     <button id="neptune"><img src="public/images/planets/neptune.png"/>NEPTUNE</button>
-    <button id="space-sounds">Play Space Sound</button>
-      <a id="favourites">FAVOURITES</a>
+    <a id="space-sounds">Play Space Sound</a>
+    <a id="favourites">FAVOURITES</a>
   </container>
 
   <container class="invisible" id="view-page">
@@ -44,9 +43,6 @@
     <div id="images">
       <h2>Images</h2>
     </div>
-    </container>
-
-
   </container>
 
   <container class="invisible" id="view-media">
@@ -55,6 +51,12 @@
       <p id="title"></p>
       <p id="description"></p>
       <button id="favourites-button">Add to Favourites</button>
+    </div>
+  </container>
+
+  <container class="invisible" id="sound-page">
+    <div id="sounds">
+      <h1>SOUNDS</h1>
     </div>
   </container>
 
@@ -69,7 +71,6 @@
       </div>
     </div>
   </div>
-
 
 </body>
 </html>

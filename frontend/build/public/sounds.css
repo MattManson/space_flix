@@ -1,0 +1,13 @@
+#sounds {
+  margin: 2em;
+}
+
+#sounds h1{
+  font-family: 'Abel', sans-serif;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+#space-sound-frame {
+  width: 70em;
+}
