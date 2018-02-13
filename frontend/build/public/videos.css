@@ -8,6 +8,16 @@
   white-space: nowrap;
 }
 
+#images {
+  border: 2px solid black;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  align-items: center;
+  width: 100%;
+  height: 13em;
+  white-space: nowrap;
+}
+
 .text-block {
   display: inline-block;
   overflow: hidden;
