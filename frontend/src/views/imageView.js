@@ -10,7 +10,6 @@ ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailU
     let viewMediaContainer= document.querySelector('#view-media');
     viewMediaContainer.className = 'visible';
     var imgThumbNail = document.querySelector('#thumbnail');
-    console.log(correctThumbnailURL);
     imgThumbNail.src = correctThumbnailURL;
     imgThumbNail.onclick = function () {
         window.location.href = correctImageURL;
@@ -34,7 +33,6 @@ ImageView.prototype.imageRender = function (data, dataObject) {
     }.bind(this);
     var titleDiv = document.createElement('div');
     titleDiv.className = 'text-block';
-    console.log(titleDiv.className);
     var titleP = document.createElement('p');
     titleP.innerText = dataObject.title;
     titleDiv.appendChild(titleP);

@@ -3,3 +3,5 @@ frontend/node_modules
 frontend/build/bundle.js
 frontend/build/bundle.js.map
 frontend/src/API_key.js
+backend/.idea
+backend/node_modules
