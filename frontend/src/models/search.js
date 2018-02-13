@@ -10,6 +10,13 @@ SearchModel.prototype.hideNonsense = function () {
   viewPageContainer.className = 'visible';
 };
 
+SearchModel.prototype.favouritesButtonClicked = function (data, view) {
+    view.clear();
+    data.onLoad = view.videoRenderFavourites.bind(view);
+    data.getFavourites();
+    this.hideNonsense();
+}
+
 SearchModel.prototype.buttonClicked = function(data, view){
   view.clear();
   data.onLoad = view.videoRender.bind(view);

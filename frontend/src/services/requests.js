@@ -1,10 +1,10 @@
 const Request = function (url) {
-    this.videoUrl = url;
+    this.url = url;
 }
 
 Request.prototype.getRequest = function(callback, dataObject) {
     var request = new XMLHttpRequest();
-    request.open('GET', this.videoUrl);
+    request.open('GET', this.url);
     request.addEventListener('load', function () {
         if(this.status != 200){
             return;

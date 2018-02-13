@@ -3,6 +3,7 @@ const VideoView = function (videoContainer) {
 }
 
 VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailURL, dataObject) {
+    console.log(dataObject);
     let frontPageContainer = document.querySelector('#front-page');
     frontPageContainer.className = 'invisible';
     let viewPageContainer= document.querySelector('#view-page');
@@ -10,7 +11,6 @@ VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailU
     let viewMediaContainer= document.querySelector('#view-media');
     viewMediaContainer.className = 'visible';
     var imgThumbNail = document.querySelector('#thumbnail');
-    console.log(correctThumbnailURL);
     imgThumbNail.src = correctThumbnailURL;
     imgThumbNail.onclick = function () {
         window.location.href = correctVideoURL;
@@ -19,7 +19,6 @@ VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailU
     title.innerText = dataObject.title;
     var description = document.querySelector('#description');
     description.innerText = dataObject.description;
-
 }
 
 VideoView.prototype.videoRender = function (data, dataObject) {
@@ -36,6 +35,36 @@ VideoView.prototype.videoRender = function (data, dataObject) {
         titleDiv.className = 'text-block';
         var titleP = document.createElement('p');
         titleP.innerText = dataObject.title;
+        titleDiv.appendChild(titleP);
+        titleDiv.appendChild(img)
+        this.videoContainer.appendChild(titleDiv);
+        // var addToFavouritesButton = document.querySelector('#add-to-favourites-button');
+        // addToFavouritesButton.addEventListener('click', function(){
+        //     var title = document.querySelector('#title');
+        //     var img = document.querySelector('#thumbnail');
+        //     console.log(title.innerText);
+        //     console.log(correctVideoURL);
+        //     console.log('add to favourites clicked');
+        // })
+    }
+}
+
+VideoView.prototype.loopHandler = function (data) {
+    return function () {
+        console.log(data)
+        this.showThumbnail(data.href, data.thumbnail, data);
+    }.bind(this);
+}
+
+VideoView.prototype.videoRenderFavourites = function (dataObject) {
+    for(data of dataObject) {
+        var img = document.createElement('img');
+        img.src = data.thumbnail;
+        img.onclick = this.loopHandler(data);
+        var titleDiv = document.createElement('div');
+        titleDiv.className = 'text-block';
+        var titleP = document.createElement('p');
+        titleP.innerText = data.title;
         titleDiv.appendChild(titleP);
         titleDiv.appendChild(img)
         this.videoContainer.appendChild(titleDiv);
