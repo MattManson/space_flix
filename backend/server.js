@@ -50,6 +50,23 @@ MongoClient.connect("mongodb://localhost:27017", function (err, client) {
         })
     })
 
+    //DELETE
+
+    server.delete('/api/favourites', function (req, res) {
+        db.collection('videos').deleteMany(function(err){
+            if(err){
+                console.log(err);
+                res.status(500);
+                res.send();
+            }
+
+            res.status(204);
+            res.send();
+
+            console.log('database deleted');
+        });
+    });
+
     server.listen(5000, function () {
         console.log('Listening on port 5000');
     })
