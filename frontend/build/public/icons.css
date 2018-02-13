@@ -1,15 +1,67 @@
+#planet-icons{
+  margin: 2em;
+}
+
+#not-planets{
+  margin: 2em;
+}
+
+#index{
+  margin: 2em;
+}
+
+index a {
+  display: inline-block;
+  color: orange;
+  width: 5em;
+  padding: 0.2em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.2em;
+  width: 10em;
+  height: 10em;
+  margin: 2em;
+}
+
+index a:hover {
+ background-color: rgb(187, 124, 62);
+ color: white;
+}
+
+a img{
+  width: 10em;
+  height: 10em;
+}
+
 .planet-icons{
   border-radius: 0.2em;
   background: transparent;
   border: none;
   width: 10em;
   height: 10em;
-  margin: 0.2em;
+  margin: 2em;
   color: orange;
   text-align: center;
 }
 
 .planet-icons img{
+  width: 10em;
+  height: 10em;
+}
+
+.not-planet-icons{
+  display: inline;
+  border-radius: 0.2em;
+  background: transparent;
+  border: none;
+  width: 10em;
+  height: 10em;
+  margin: 2em;
+  color: orange;
+  text-align: center;
+}
+
+.not-planet-icons img{
   width: 10em;
   height: 10em;
 }

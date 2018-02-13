@@ -18,6 +18,21 @@ header {
   font-family: 'Abel', sans-serif;
 }
 
+#home {
+  display: block;
+  color: orange;
+  width: 5em;
+  padding: 0.2em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.2em;
+}
+
+#home:hover {
+ background-color: rgb(187, 124, 62);
+ color: white;
+}
+
 div {
   display: inline-block;
 }
@@ -27,22 +42,6 @@ h1 {
   justify-content: center;
   text-align: center;
   margin: 0;
-}
-
-a {
-  display: block;
-  color: black;
-  width: 5em;
-  background-color: white;
-  padding: 0.2em;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.2em;
-}
-
-a:hover {
- background-color: rgb(187, 124, 62);
- color: white;
 }
 
 button {
