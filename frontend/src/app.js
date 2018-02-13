@@ -39,20 +39,18 @@ const app = function () {
   for (let counter = 0; counter < buttons.length; counter++){
     if(buttons[counter].id !== 'search') {
       buttons[counter].addEventListener("click", function() {
-        var newUrl1 = new NasaAPI(this.id)
-        var newUrl2 = new NasaAPI(this.id)
+        var newUrl1 = new NasaAPI(this.id);
+        var newUrl2 = new NasaAPI(this.id);
+        var soundNasaApi = new SoundNASAData(this.id);
         click.buttonClicked(newUrl1, videoView);
         click.buttonClickedImage(newUrl2, imageView);
+        click.buttonClickedSound(soundNasaApi, soundView);
       });
     }
   };
 
   var apod = new Apod();
   apod.getImage();
-
-  var soundNasaApi = new SoundNASAData();
-  soundNasaApi.showData = soundView.renderSound.bind(soundView);
-  soundNasaApi.getData();
 };
 
 window.addEventListener('load', app);

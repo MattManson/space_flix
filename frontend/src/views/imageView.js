@@ -23,7 +23,6 @@ ImageView.prototype.imageRender = function (data, title) {
 };
 
 ImageView.prototype.clear = function(){
-    console.log("clear function called");
     this.imageContainer.innerText = " ";
 }
 

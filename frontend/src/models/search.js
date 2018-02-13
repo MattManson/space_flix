@@ -18,17 +18,17 @@ SearchModel.prototype.buttonClicked = function(data, view){
 };
 
 SearchModel.prototype.buttonClickedImage = function(data, view){
-    view.clear();
-    data.onLoad = view.imageRender.bind(view);
-    data.getImageURLS();
-    this.hideNonsense();
+  view.clear();
+  data.onLoad = view.imageRender.bind(view);
+  data.getImageURLS();
+  this.hideNonsense();
 };
 
-// SearchModel.prototype.buttonClickedSound = function(data, view){
-//     view.clear();
-//     data.onLoad = view.renderSound.bind(view);
-//     // data.getImageURLS();
-//     this.hideNonsense();
-// };
+SearchModel.prototype.buttonClickedSound = function(data, view){
+  view.clear();
+  data.showData = view.renderSound.bind(view);
+  data.getData();
+  this.hideNonsense();
+};
 
 module.exports = SearchModel;
