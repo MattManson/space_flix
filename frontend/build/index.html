@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>SpaceFlix</title>
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/videos.css">
     <link rel="stylesheet" href="public/main.css">
+    <link rel="stylesheet" href="public/popup.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans" rel="stylesheet">
     <script src="bundle.js"></script>
   </head>
   <body>
@@ -28,33 +30,7 @@
       <button id="venus">VENUS</button>
       <button id="mars">MARS</button>
       <button id="neptune">NEPTUNE</button>
-    </container>
-
-    <div id="popup_bg">
-      <div id="popup_main">
-        <div id="popup_contents">
-          <div id="close_popup" title="close this window">
-            <p>X</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-    var popupWindow = document.querySelector('#popup_bg');
-
-    function closePopup(){
-      popupWindow.style.display = 'none';
-    }
-    </script>
-
-    <container class="visble" id="front-page">
-      <div id="apod-slider"></div>
-      <button id="jupiter">JUPITER</button>
-      <button id="saturn">SATURN</button>
-      <button id="earth">EARTH</button>
-      <button id="venus">VENUS</button>
-      <button id="mars">MARS</button>
-      <button id="neptune">NEPTUNE</button>
+      <button id="space-sounds">Play Space Sound</button>
     </container>
 
     <container class="invisible" id="view-page">
@@ -64,6 +40,22 @@
       <div id="images">
         <h2>Images</h2>
       </div>
+      <div id="popup_bg">
+        <div id="popup_main">
+          <div id="popup_contents">
+            <div id="close_popup" title="close this window">
+              <p>X</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        var popupWindow = document.querySelector('#popup_bg');
+
+        function closePopup(){
+          popupWindow.style.display = 'none';
+        }
+      </script>
     </container>
 
     <container class="invisible" id="view-media">

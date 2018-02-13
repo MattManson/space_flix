@@ -10,14 +10,12 @@ Apod.prototype.displayImage = function(imageDetails) {
   var imageLocation = document.querySelector('#apod-slider');
   var divDetails = document.querySelector('#bottom-left');
   var apodImage = document.createElement('img');
-  var apodDetails = document.createElement('h2');
+  var apodDetails = document.createElement('p');
   apodImage.src = imageDetails.hdurl;
-  apodDetails.innerText = 'Image of The Day: ' + imageDetails.title;
+  apodDetails.innerText = 'Image of The Day : ' + imageDetails.title;
   imageLocation.appendChild(apodImage);
   divDetails.appendChild(apodDetails);
 }
-
-// find div, create H2, add innerText to h2 that creates imageoftheday + title then append to the div
 
 Apod.prototype.getImage = function(){
   var request = new Request(this.videoUrl);
