@@ -27,9 +27,18 @@
       <file leaf-file-name="videoView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/videoView.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="307">
               <caret line="56" column="53" lean-forward="false" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
               <folding />
+=======
+            <state relative-caret-position="142">
+              <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+              <folding>
+                <marker date="1518539158000" expanded="true" signature="4499:4502" ph="{...}" />
+                <marker date="1518539158000" expanded="true" signature="4499:4504" ph="{...}" />
+              </folding>
+>>>>>>> develop
             </state>
           </provider>
         </entry>
@@ -38,7 +47,11 @@
         <entry file="file://$PROJECT_DIR$/src/views/imageView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
+<<<<<<< HEAD
               <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="27" />
+=======
+              <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="27" />
+>>>>>>> develop
               <folding />
             </state>
           </provider>
@@ -48,7 +61,11 @@
         <entry file="file://$PROJECT_DIR$/src/models/favourites.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
+<<<<<<< HEAD
               <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+=======
+              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+>>>>>>> develop
               <folding />
             </state>
           </provider>
@@ -57,13 +74,19 @@
       <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/search.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="160">
               <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="45" />
+=======
+            <state relative-caret-position="25">
+              <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+>>>>>>> develop
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="favouriteVideoView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/favouriteVideoView.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,6 +97,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> develop
       <file leaf-file-name="SoundView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/SoundView.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,8 +112,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="299">
               <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+=======
+            <state relative-caret-position="584">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+>>>>>>> develop
               <folding />
             </state>
           </provider>
@@ -97,8 +127,13 @@
       <file leaf-file-name="requests.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/requests.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="562">
               <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+=======
+            <state relative-caret-position="202">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> develop
               <folding />
             </state>
           </provider>
@@ -107,8 +142,13 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-8">
               <caret line="37" column="66" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="66" />
+=======
+            <state relative-caret-position="-38">
+              <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+>>>>>>> develop
               <folding />
             </state>
           </provider>
@@ -269,7 +309,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="65720000" />
+=======
+    <option name="totallyTimeSpent" value="56134000" />
+>>>>>>> develop
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -305,11 +349,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/apod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> develop
     <entry file="file://$PROJECT_DIR$/src/views/videoView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
-          <folding />
+          <folding>
+            <marker date="1518539158000" expanded="true" signature="4499:4502" ph="{...}" />
+            <marker date="1518539158000" expanded="true" signature="4499:4504" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -321,19 +386,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API_key.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API_key.js" />
     <entry file="file://$PROJECT_DIR$/src/views/videoView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
-          <folding />
+          <folding>
+            <marker date="1518539158000" expanded="true" signature="4499:4502" ph="{...}" />
+            <marker date="1518539158000" expanded="true" signature="4499:4504" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -353,14 +414,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="112" column="14" lean-forward="false" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/style.css" />
     <entry file="file://$PROJECT_DIR$/src/services/requests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -381,7 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -397,7 +450,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1518539158000" expanded="true" signature="4499:4502" ph="{...}" />
+            <marker date="1518539158000" expanded="true" signature="4499:4504" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -428,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -444,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -460,7 +514,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1518539158000" expanded="true" signature="4499:4502" ph="{...}" />
+            <marker date="1518539158000" expanded="true" signature="4499:4504" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -490,7 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -506,7 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -530,7 +585,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1518539158000" expanded="true" signature="4499:4502" ph="{...}" />
+            <marker date="1518539158000" expanded="true" signature="4499:4504" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -569,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -580,6 +637,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/build/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="583">
@@ -588,40 +646,52 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/src/models/SoundNASAData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/style.css" />
+>>>>>>> develop
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/models/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
+>>>>>>> develop
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API_key.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API_key.js" />
     <entry file="file://$PROJECT_DIR$/src/models/apod.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/SoundNASAData.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -640,14 +710,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+=======
+        <state relative-caret-position="136">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+>>>>>>> develop
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/requests.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="562">
           <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+=======
+        <state relative-caret-position="202">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> develop
           <folding />
         </state>
       </provider>
@@ -662,24 +741,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/search.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="160">
           <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="45" />
+=======
+        <state relative-caret-position="351">
+          <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="27" />
+>>>>>>> develop
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-8">
           <caret line="37" column="66" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="66" />
           <folding />
+=======
+        <state relative-caret-position="142">
+          <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding>
+            <marker date="1518539158000" expanded="true" signature="4499:4502" ph="{...}" />
+            <marker date="1518539158000" expanded="true" signature="4499:4504" ph="{...}" />
+          </folding>
+>>>>>>> develop
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/SoundView.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="-38">
+          <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+>>>>>>> develop
           <folding />
         </state>
       </provider>
@@ -702,8 +800,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/videoView.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="307">
           <caret line="56" column="53" lean-forward="false" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+=======
+        <state relative-caret-position="584">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+>>>>>>> develop
           <folding />
         </state>
       </provider>

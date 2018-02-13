@@ -1,0 +1,15 @@
+.planet-icons{
+  border-radius: 0.2em;
+  background: transparent;
+  border: none;
+  width: 10em;
+  height: 10em;
+  margin: 0.2em;
+  color: orange;
+  text-align: center;
+}
+
+.planet-icons img{
+  width: 10em;
+  height: 10em;
+}

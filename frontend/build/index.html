@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>SpaceFlix</title>
   <link rel="stylesheet" href="public/videos.css">
   <link rel="stylesheet" href="public/main.css">
   <link rel="stylesheet" href="public/popup.css">
+
+  <link rel="stylesheet" href="public/icons.css">
+  <link rel="stylesheet" href="public/sounds.css">
+
   <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans" rel="stylesheet">
   <script src="bundle.js"></script>
 </head>
 <body>
   <header>
-    <a href = "http://localhost:3000/" id="test">HOME</a>
+    <a href = "http://localhost:3000/" id="home">HOME</a>
     <h1>SPACEFLIX</h1>
     <div>
       <input type="text">
@@ -20,32 +23,41 @@
     </div>
   </header>
 
-
-
   <container class="visble" id="front-page">
     <div class="ImageAndTextContainer">
       <div id="apod-slider"></div>
       <div id="bottom-left"></div>
     </div>
-    <button id="jupiter">JUPITER</button>
-    <button id="saturn">SATURN</button>
-    <button id="earth">EARTH</button>
-    <button id="venus">VENUS</button>
-    <button id="mars">MARS</button>
-    <button id="neptune"><img src="public/images/planets/neptune.png"/>NEPTUNE</button>
-    <button id="space-sounds">Play Space Sound</button>
-      <a id="favourites">FAVOURITES</a>
+    <button class="planet-icons" id="jupiter">
+      <img src="public/images/planets/jupiter-with-satellite.png"/>JUPITER
+    </button>
+    <button class="planet-icons" id="moon">
+      <img src="public/images/planets/big-moon.png"/>MOON
+    </button>
+    <button class="planet-icons" id="saturn">
+      <img src="public/images/planets/saturn.png"/>SATURN
+    </button>
+    <button class="planet-icons" id="earth"><img src="public/images/planets/earth-and-moon.png"/>EARTH
+    </button>
+    <button class="planet-icons" id="venus">
+      <img src="public/images/planets/venus-with-satellite.png"/>VENUS
+    </button>
+    <button class="planet-icons" id="mars">
+      <img src="public/images/planets/mars-with-satellite.png"/>MARS
+    </button>
+    <button class="planet-icons" id="neptune">
+      <img src="public/images/planets/neptune-with-satellite.png"/>NEPTUNE
+    </button>
+    <a id="space-sounds">Play Space Sound</a>
+    <a id="favourites">FAVOURITES</a>
   </container>
 
   <container class="invisible" id="view-page">
-    <div id="videos">
-      <h2>Videos</h2>
-    </div>
-    <div id="images">
-      <h2>Images</h2>
-    </div>
-    </container>
-
+    <h2>VIDEOS</h2>
+    <div id="videos"></div>
+    <h2>IMAGES</h2>
+    <div id="images"></div>
+  </container>
 
       <container class="invisible" id="favourites-page">
         <div id="favourite-videos">
@@ -67,18 +79,23 @@
             </div>
           </container>
 
-          <div id="popup_bg">
-            <div id="popup_main">
-              <div id="popup_contents" style='position: relative; width: 600px; height: 0px; padding-bottom: 60%;'>
-              </div>
-              <div id="close_popup" title="close this window">
-                <p>
-                  <font color="white">X</font>
-                </p>
-              </div>
-            </div>
-          </div>
+  <container class="invisible" id="sound-page">
+    <div id="sounds">
+      <h1>SOUNDS</h1>
+    </div>
+  </container>
 
+  <div id="popup_bg">
+    <div id="popup_main">
+      <div id="popup_contents" style='position: relative; width: 600px; height: 0px; padding-bottom: 60%;'>
+      </div>
+      <div id="close_popup" title="close this window">
+        <p>
+          <font color="white">X</font>
+        </p>
+      </div>
+    </div>
+  </div>
 
-      </body>
-      </html>
+</body>
+</html>

@@ -1,19 +1,29 @@
 const SoundView = function (soundContainer) {
     this.soundContainer = soundContainer;
+    this.soundCollection = null;
 };
 
 SoundView.prototype.renderSound = function(data) {
   let soundClipsCollection = data.results;
-  console.log(soundClipsCollection);
-  for (soundClip of soundClipsCollection) {
-    let iframe = document.createElement('iframe');
-    iframe.src = 'https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/' + soundClip.id;
-    this.soundContainer.appendChild(iframe);
-  }
+  this.soundCollection = soundClipsCollection;
+  let soundClip = this.pickSound();
+  console.log(soundClip);
+  let iframe = document.createElement('iframe');
+  iframe.src = 'https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/' + soundClip.id;
+  iframe.id = "space-sound-frame";
+  let pTag = document.createElement('p');
+  pTag.innerText = soundClip.description;
+  this.soundContainer.appendChild(iframe);
+  this.soundContainer.appendChild(pTag);
 };
 
-SoundView.prototype.clear = function () {
-  console.log("clear function called");
+SoundView.prototype.pickSound = function() {
+  let number = this.randomNumber(0, 63);
+  return this.soundCollection[number];
+};
+
+SoundView.prototype.randomNumber = function (min, max) {
+  return Math.floor(Math.random() * (max - min));
 };
 
 module.exports = SoundView;

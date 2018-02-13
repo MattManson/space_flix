@@ -82,7 +82,7 @@ input {
 #bottom-left {
   position: relative;
   bottom: 4em;
-  right: 19em;
+  right: 15em;
   opacity: 0;
   transition: .5s linear;
   font-family: 'Open Sans', sans-serif;
