@@ -2,6 +2,12 @@ const VideoView = function (videoContainer) {
   this.videoContainer = videoContainer;
 }
 
+var popupWindow = document.querySelector('#popup_bg');
+
+function openPopup(){
+  popupWindow.style.display = 'block';
+}
+
 VideoView.prototype.videoRender = function (data, title) {
         var substring = "mov";
         var correctVideoURL = data[0].replace(/ /g, "%20");
@@ -9,7 +15,7 @@ VideoView.prototype.videoRender = function (data, title) {
             var correctThumbNailURL = data[data.length - 2].replace(/ /g, "%20");
             var img = document.createElement('img');
             img.src = correctThumbNailURL;
-            img.onclick = function () {
+            img.onclick = openPopup () {
                 window.location.href = correctVideoURL;
             };
             var titleDiv = document.createElement('div');
