@@ -2,6 +2,11 @@
   font-family: 'Abel', sans-serif;
   margin-left: 1em;
   margin-top: 2em;
+  background-color: rgb(240, 234, 220);
+  padding: 0.4em;
+  width: 95%;
+  text-align: center;
+  border-radius: 0.2em;
 }
 
 #videos {
@@ -27,6 +32,7 @@
   display: inline-block;
   overflow: hidden;
   width: auto;
+  height: 100%;
   margin-right: 0.5em;
   position: relative;
 }
@@ -39,6 +45,8 @@
 .text-block img {
   position: relative;
   transition: .5s linear;
+  height: 100%;
+  width: auto;
 }
 
 .text-block p {
@@ -46,10 +54,11 @@
   opacity: 1;
   position: absolute;
   height: 13em;
-  width: 16em;
+  width: auto;
   overflow-x: visible;
   white-space: pre-wrap;
-
+  font-family: 'Open Sans', sans-serif;
+  padding: 1em;
 }
 
 .text-block p:hover {
