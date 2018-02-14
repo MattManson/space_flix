@@ -29,14 +29,13 @@ Request.prototype.post = function (callback, body) {
     request.send(JSON.stringify(body));
 }
 
-Request.prototype.delete = function (callback) {
+Request.prototype.delete = function () {
     const request = new XMLHttpRequest();
     request.open('DELETE', this.url);
     request.addEventListener('load', function () {
         if(this.status != 204){
             return;
         }
-        callback();
     });
     request.send();
 }
