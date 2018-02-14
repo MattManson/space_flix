@@ -29,30 +29,16 @@ header {
   border-radius: 0.2em;
 }
 
-/* a {
-  display: block;
-  color: orange;
-  width: 5em;
-  padding: 0.2em;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.2em;
-} */
-
 #home:hover {
- background-color: rgb(187, 124, 62);
+ background-color: rgb(221, 124, 62);
  color: rgb(240, 234, 220);
  border: none;
 }
 
 #search:hover {
-  background-color: rgb(187, 124, 62);
+  background-color: rgb(221, 124, 62);
   color: rgb(240, 234, 220);
 }
-
-/* div {
-  display: inline-block;
-} */
 
 h1 {
   color: white;

@@ -1,0 +1,36 @@
+#show-media {
+  display: grid;
+  margin: 1em;
+  background-color: rgb(240, 234, 220);
+  padding: 1.5em;
+  border-radius: 0.2em;
+  grid-gap: 2em;
+}
+
+#show-media p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  margin: 0;
+}
+
+#show-media #title {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#show-media a{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8em;
+  background-color: rgb(41, 43, 46);
+  color: rgb(240, 234, 220);
+  padding: 1em;
+  border-radius: 0.2em;
+  width: 10em;
+  text-align: center;
+}
+
+#show-media a:hover {
+  background-color: rgb(221, 124, 62);
+
+}

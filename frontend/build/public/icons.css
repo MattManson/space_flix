@@ -5,39 +5,6 @@
   border-radius: 0.2em;
 }
 
-#not-planets{
-  margin: 2em;
-  justify-content: center;
-}
-
-#index{
-  margin: 2em;
-}
-
-#index a {
-  display: inline-block;
-  font-family: 'Open Sans', sans-serif;
-  color: orange;
-  width: 5em;
-  padding: 0.2em;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.2em;
-  width: 10em;
-  height: 10em;
-  margin: 2em;
-}
-
-#index a:hover {
- /* background-color: rgb(187, 124, 62); */
- color: white;
-}
-
-#index a img{
-  width: 10em;
-  height: 10em;
-}
-
 .planet-icons {
   border-radius: 0.2em;
   background: transparent;
@@ -46,7 +13,6 @@
   height: 10em;
   margin: 0.08em;
   font-family: 'Open Sans', sans-serif;
-  /* color: orange; */
   text-align: center;
   font-size: 1em;
   padding: 0.3em;
@@ -69,21 +35,86 @@
   padding: 0.4em;
 }
 
+#not-planets{
+  margin: 2em;
+  background-color: rgb(240, 234, 220);
+  padding: 0.5em 1.3em 1.3em 1.3em;
+  border-radius: 0.2em;
+}
+
 .not-planet-icons{
-  display: inline;
   border-radius: 0.2em;
   background: transparent;
   border: none;
   width: 10em;
   height: 10em;
-  margin: 2em;
-  color: orange;
+  margin: 0.08em;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+}
+
+.not-planet-icons:hover {
+  background-color: rgb(221, 124, 62);
+  color: rgb(240, 234, 220);
+  border-radius: 2em;
+  padding: 0.4em;
 }
 
 .not-planet-icons img{
+  width: 7em;
+  height: 7em;
+  margin-bottom: 0.8em;
+}
+
+#sun {
+  padding: 0.5em;
+}
+
+#index {
+  margin: 2em;
+  background-color: rgb(240, 234, 220);
+  padding: 0.5em 1.3em 0.3em 1.3em;
+  border-radius: 0.2em;
+}
+
+#index a {
+  font-family: 'Open Sans', sans-serif;
+  width: 5em;
+  padding: 0.2em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.2em;
   width: 10em;
   height: 10em;
+  margin-right: 3em;
+  padding-bottom: 3em;
+}
+
+#index a:hover {
+  background-color: rgb(221, 124, 62);
+  color: rgb(240, 234, 220);
+  border-radius: 2em;
+}
+
+#index a img{
+  width: 7em;
+  height: 7em;
+  margin-bottom: 0.8em;
+  padding: 0.8em;
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.extra-buttons {
+  display: grid;
+  width: 10em;
+  margin-right: 2em;
 }
 
 #front-page h3 {
