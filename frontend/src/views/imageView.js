@@ -2,10 +2,6 @@ const ImageView = function (imageContainer) {
   this.imageContainer = imageContainer;
 }
 
-ImageView.prototype.toggleVisibility = function(){
-
-}
-
 ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailURL, dataObject) {
   let frontPageContainer = document.querySelector('#front-page');
   frontPageContainer.className = 'invisible';
@@ -22,10 +18,16 @@ ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailU
   title.innerText = dataObject.title;
   var description = document.querySelector('#description');
   description.innerText = dataObject.description;
-  var addToFavourites = document.querySelector('#add-to-favourites-button');
-  addToFavourites.innerText = '';
-  var addedToFavourites = document.querySelector('#added-to-favourites');
-  addedToFavourites.innerText = '';
+  this.changeButtonLayout();
+}
+
+ImageView.prototype.changeButtonLayout = function () {
+    var addToFavourites = document.querySelector('#add-to-favourites-button');
+    addToFavourites.className = 'invisible';
+    var backButton = document.querySelector('#back');
+    var backButtonToFavourites = document.querySelector('#back-to-favourites');
+    backButton.className = 'visible';
+    backButtonToFavourites.className = 'invisible';
 }
 
 ImageView.prototype.imageRender = function (data, dataObject) {
