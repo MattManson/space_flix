@@ -53,8 +53,9 @@ VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailU
   this.changeButtonLayout();
   var addToFavouritesButton = document.querySelector('#add-to-favourites-button');
   addToFavouritesButton.addEventListener('click', function(e){
-    var addedToFavourites = document.querySelector('#added-to-favourites');
-    addedToFavourites.innerText = '';
+    this.showToast();
+    // var addedToFavourites = document.querySelector('#added-to-favourites');
+    // addedToFavourites.innerText = '';
     var favourites = new Favourites();
     var favouriteVideoView = new FavouriteVideoView(document.querySelector('#favourite-videos'));
     favourites.onLoad = favouriteVideoView.videoRenderFavourites.bind(favouriteVideoView);
@@ -89,6 +90,14 @@ VideoView.prototype.videoRender = function (data, dataObject) {
     titleDiv.appendChild(img)
     this.videoContainer.appendChild(titleDiv);
   }
+}
+
+VideoView.prototype.showToast = function(){
+  var toast = document.querySelector('#toast');
+  toast.classList.add("show");
+  setTimeout(function(){
+    toast.classList.remove("show");
+  }, 3000);
 }
 
 VideoView.prototype.vidClear = function(){
