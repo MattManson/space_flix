@@ -9,13 +9,13 @@ body {
 
 header {
   display: inline-flex;
-  position: relative;
+  position: fixed;
   background-color: rgb(41, 43, 46);
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   font-family: 'Abel', sans-serif;
 }
 
@@ -56,7 +56,7 @@ input {
 #apod-slider {
   display: grid;
   justify-content: center;
-  height: 30em;
+  height: 35em;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -70,13 +70,15 @@ input {
 
 .ImageAndTextContainer{
   position: relative;
-  text-align: center;
+  height: 35em;
+  top: 5em;
+  /* text-align: center; */
 }
 
 #bottom-left {
   position: relative;
-  bottom: 4em;
-  right: 15em;
+  bottom: 5em;
+  left: 7em;
   opacity: 0;
   transition: .5s linear;
   font-family: 'Open Sans', sans-serif;
@@ -95,8 +97,13 @@ input {
 
 #front-page h2 {
   font-family: 'Abel', sans-serif;
-  margin-top: 0;
-  margin-left: 1.9em;
+  margin: 1em 0 1em 1.9em;
   width: 30em;
   color: rgb(41, 43, 46);
+}
+
+#click-text {
+  margin-top: 2em;
+  position: relative;
+  top: 4em;
 }
