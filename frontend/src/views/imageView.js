@@ -2,7 +2,7 @@ const ImageView = function (imageContainer) {
   this.imageContainer = imageContainer;
 }
 
-ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailURL, dataObject) {
+ImageView.prototype.toggleVisibility = function(){
   let frontPageContainer = document.querySelector('#front-page');
   frontPageContainer.className = 'invisible';
   let viewPageContainer= document.querySelector('#view-page');
@@ -10,6 +10,10 @@ ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailU
   let viewMediaContainer= document.querySelector('#view-media');
   viewMediaContainer.className = 'visible';
   var imgThumbNail = document.querySelector('#thumbnail');
+}
+
+ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailURL, dataObject) {
+  this.toggleVisibility();
   imgThumbNail.src = correctThumbnailURL;
   imgThumbNail.onclick = function () {
     window.location.href = correctImageURL;
