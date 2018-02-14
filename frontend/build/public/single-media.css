@@ -19,7 +19,7 @@
   margin: 0;
 }
 
-#add-to-favourites-button {
+#show-media a{
   font-family: 'Open Sans', sans-serif;
   font-size: 0.8em;
   background-color: rgb(41, 43, 46);
@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-#add-to-favourites-button:hover {
+#show-media a:hover {
   background-color: rgb(221, 124, 62);
 
 }
