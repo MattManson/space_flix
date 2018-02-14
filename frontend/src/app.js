@@ -37,21 +37,21 @@ const app = function () {
   };
 
   favouritesButton.addEventListener('click', function () {
-      var favourites = new Favourites();
-      click.favouritesButtonClicked(favourites, favouriteVideoView);
+    var favourites = new Favourites();
+    click.favouritesButtonClicked(favourites, favouriteVideoView);
   });
 
   deleteAll.addEventListener('click', function () {
-      var favourites = new Favourites();
-      click.deleteButtonClicked(favourites, favouriteVideoView);
+    var favourites = new Favourites();
+    click.deleteButtonClicked(favourites, favouriteVideoView);
   });
 
   backButton.addEventListener('click', function () {
-      click.backButtonClicked();
+    click.backButtonClicked();
   });
 
   backButtonToFavourites.addEventListener('click', function () {
-      click.backToFavouritesButtonClicked();
+    click.backToFavouritesButtonClicked();
   });
 
   search.addEventListener('click', function() {

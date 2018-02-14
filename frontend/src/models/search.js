@@ -11,48 +11,48 @@ SearchModel.prototype.hideNonsense = function () {
 };
 
 SearchModel.prototype.hideViewPage = function () {
-    let frontPageContainer = document.querySelector('#front-page');
-    frontPageContainer.className = 'invisible';
-    let viewPageContainer= document.querySelector('#view-page');
-    viewPageContainer.className = 'invisible';
-    let favouritesPage = document.querySelector('#favourites-page');
-    favouritesPage.className = 'visible';
+  let frontPageContainer = document.querySelector('#front-page');
+  frontPageContainer.className = 'invisible';
+  let viewPageContainer= document.querySelector('#view-page');
+  viewPageContainer.className = 'invisible';
+  let favouritesPage = document.querySelector('#favourites-page');
+  favouritesPage.className = 'visible';
 }
 
 SearchModel.prototype.backButtonClicked = function () {
-    let frontPageContainer = document.querySelector('#front-page');
-    frontPageContainer.className = 'invisible';
-    let viewPageContainer = document.querySelector('#view-page');
-    viewPageContainer.className = 'visible';
-    let favouritesPage = document.querySelector('#favourites-page');
-    favouritesPage.className = 'invisible';
-    let viewMediaContainer = document.querySelector('#view-media');
-    viewMediaContainer.className = 'invisible';
+  let frontPageContainer = document.querySelector('#front-page');
+  frontPageContainer.className = 'invisible';
+  let viewPageContainer = document.querySelector('#view-page');
+  viewPageContainer.className = 'visible';
+  let favouritesPage = document.querySelector('#favourites-page');
+  favouritesPage.className = 'invisible';
+  let viewMediaContainer = document.querySelector('#view-media');
+  viewMediaContainer.className = 'invisible';
 }
 
 SearchModel.prototype.backToFavouritesButtonClicked = function () {
-    let frontPageContainer = document.querySelector('#front-page');
-    frontPageContainer.className = 'invisible';
-    let viewPageContainer = document.querySelector('#view-page');
-    viewPageContainer.className = 'invisible';
-    let favouritesPage = document.querySelector('#favourites-page');
-    favouritesPage.className = 'visible';
-    let viewMediaContainer = document.querySelector('#view-media');
-    viewMediaContainer.className = 'invisible';
+  let frontPageContainer = document.querySelector('#front-page');
+  frontPageContainer.className = 'invisible';
+  let viewPageContainer = document.querySelector('#view-page');
+  viewPageContainer.className = 'invisible';
+  let favouritesPage = document.querySelector('#favourites-page');
+  favouritesPage.className = 'visible';
+  let viewMediaContainer = document.querySelector('#view-media');
+  viewMediaContainer.className = 'invisible';
 }
 
 
 SearchModel.prototype.favouritesButtonClicked = function (data, view) {
-    view.clear();
-    data.onLoad = view.videoRenderFavourites.bind(view);
-    data.getFavourites();
-    this.hideViewPage();
+  view.clear();
+  data.onLoad = view.videoRenderFavourites.bind(view);
+  data.getFavourites();
+  this.hideViewPage();
 }
 
 SearchModel.prototype.deleteButtonClicked = function (data, view) {
-    view.clear();
-    data.deleteFavourites();
-    this.hideViewPage();
+  view.clear();
+  data.deleteFavourites();
+  this.hideViewPage();
 }
 
 SearchModel.prototype.buttonClicked = function(data, view){
