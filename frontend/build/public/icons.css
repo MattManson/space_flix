@@ -1,4 +1,5 @@
 #planet-icons{
+  display: block;
   margin: 2em;
   background-color: rgb(240, 234, 220);
   padding: 0.5em 1.3em 1.3em 1.3em;
@@ -11,7 +12,7 @@
   border: none;
   width: 10em;
   height: 10em;
-  margin: 0.08em;
+  margin: 0.08em auto 0.08em auto;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   font-size: 1em;
