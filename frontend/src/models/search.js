@@ -19,6 +19,17 @@ SearchModel.prototype.hideViewPage = function () {
     favouritesPage.className = 'visible';
 }
 
+SearchModel.prototype.backButtonClicked = function () {
+    let frontPageContainer = document.querySelector('#front-page');
+    frontPageContainer.className = 'invisible';
+    let viewPageContainer = document.querySelector('#view-page');
+    viewPageContainer.className = 'visible';
+    let favouritesPage = document.querySelector('#favourites-page');
+    favouritesPage.className = 'invisible';
+    let viewMediaContainer = document.querySelector('#view-media');
+    viewMediaContainer.className = 'invisible';
+}
+
 SearchModel.prototype.favouritesButtonClicked = function (data, view) {
     view.clear();
     data.onLoad = view.videoRenderFavourites.bind(view);

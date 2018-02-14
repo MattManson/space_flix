@@ -18,6 +18,7 @@ const app = function () {
   var search = document.querySelector('#search');
   var searchBox = document.querySelector('input');
   var deleteAll = document.querySelector('#delete-all');
+  var backButton = document.querySelector('#back');
   let click = new SearchModel();
   var closePopup = document.querySelector("#close_popup")
   closePopup.addEventListener('click', function(){
@@ -42,8 +43,11 @@ const app = function () {
   deleteAll.addEventListener('click', function () {
       var favourites = new Favourites();
       click.deleteButtonClicked(favourites, favouriteVideoView);
-      console.log('delete clicked');
   });
+
+  backButton.addEventListener('click', function () {
+      click.backButtonClicked();
+  })
 
 
   search.addEventListener('click', function() {
