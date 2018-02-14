@@ -54,18 +54,17 @@ VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailU
   var addToFavouritesButton = document.querySelector('#add-to-favourites-button');
   addToFavouritesButton.addEventListener('click', function(e){
     this.showToast();
-    // var addedToFavourites = document.querySelector('#added-to-favourites');
-    // addedToFavourites.innerText = '';
     var favourites = new Favourites();
     var favouriteVideoView = new FavouriteVideoView(document.querySelector('#favourite-videos'));
     favourites.onLoad = favouriteVideoView.videoRenderFavourites.bind(favouriteVideoView);
     favourites.addToFavourites(e, correctVideoURL, correctThumbnailURL, dataObject)
     addedToFavourites.innerText = 'Added to Favourites';
-    console.log('add to favourites clicked');
   }.bind(this))
 }
 
 VideoView.prototype.changeButtonLayout = function () {
+  var addToFavourites = document.querySelector('#add-to-favourites-button');
+  addToFavourites.className = 'visible';
   var backButton = document.querySelector('#back');
   var backButtonToFavourites = document.querySelector('#back-to-favourites');
   backButton.className = 'visible';
