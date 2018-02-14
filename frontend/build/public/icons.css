@@ -75,7 +75,7 @@
 #index {
   margin: 2em;
   background-color: rgb(240, 234, 220);
-  padding: 0.5em 1.3em 1.3em 1.3em;
+  padding: 0.5em 1.3em 0.3em 1.3em;
   border-radius: 0.2em;
 }
 
@@ -89,7 +89,7 @@
   width: 10em;
   height: 10em;
   margin-right: 3em;
-  padding-bottom: 4em;
+  padding-bottom: 3em;
 }
 
 #index a:hover {
