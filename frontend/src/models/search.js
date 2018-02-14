@@ -30,6 +30,18 @@ SearchModel.prototype.backButtonClicked = function () {
     viewMediaContainer.className = 'invisible';
 }
 
+SearchModel.prototype.backToFavouritesButtonClicked = function () {
+    let frontPageContainer = document.querySelector('#front-page');
+    frontPageContainer.className = 'invisible';
+    let viewPageContainer = document.querySelector('#view-page');
+    viewPageContainer.className = 'invisible';
+    let favouritesPage = document.querySelector('#favourites-page');
+    favouritesPage.className = 'visible';
+    let viewMediaContainer = document.querySelector('#view-media');
+    viewMediaContainer.className = 'invisible';
+}
+
+
 SearchModel.prototype.favouritesButtonClicked = function (data, view) {
     view.clear();
     data.onLoad = view.videoRenderFavourites.bind(view);

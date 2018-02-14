@@ -47,6 +47,7 @@ VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailU
     title.innerText = dataObject.title;
     var description = document.querySelector('#description');
     description.innerText = dataObject.description;
+    this.changeButtonLayout();
     var addToFavouritesButton = document.querySelector('#add-to-favourites-button');
     addToFavouritesButton.addEventListener('click', function(e){
         var addedToFavourites = document.querySelector('#added-to-favourites');
@@ -58,6 +59,13 @@ VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailU
         addedToFavourites.innerText = 'Added to Favourites';
         console.log('add to favourites clicked');
     }.bind(this))
+}
+
+VideoView.prototype.changeButtonLayout = function () {
+    var backButton = document.querySelector('#back');
+    var backButtonToFavourites = document.querySelector('#back-to-favourites');
+    backButton.className = 'visible';
+    backButtonToFavourites.className = 'invisible';
 }
 
 VideoView.prototype.videoRender = function (data, dataObject) {

@@ -49,8 +49,16 @@ FavouriteVideoView.prototype.showThumbnail = function (correctVideoURL, correctT
     title.innerText = dataObject.title;
     var description = document.querySelector('#description');
     description.innerText = dataObject.description;
+    this.changeButtonLayout();
+}
+
+FavouriteVideoView.prototype.changeButtonLayout = function () {
     var addToFavouritesButton = document.querySelector('#add-to-favourites-button');
     addToFavouritesButton.className = 'invisible';
+    var backButton = document.querySelector('#back');
+    var backButtonToFavourites = document.querySelector('#back-to-favourites');
+    backButton.className = 'invisible';
+    backButtonToFavourites.className = 'visible';
 }
 
 FavouriteVideoView.prototype.loopHandler = function (data) {

@@ -19,6 +19,7 @@ const app = function () {
   var searchBox = document.querySelector('input');
   var deleteAll = document.querySelector('#delete-all');
   var backButton = document.querySelector('#back');
+  var backButtonToFavourites = document.querySelector('#back-to-favourites');
   let click = new SearchModel();
   var closePopup = document.querySelector("#close_popup")
   closePopup.addEventListener('click', function(){
@@ -47,8 +48,11 @@ const app = function () {
 
   backButton.addEventListener('click', function () {
       click.backButtonClicked();
-  })
+  });
 
+  backButtonToFavourites.addEventListener('click', function () {
+      click.backToFavouritesButtonClicked();
+  });
 
   search.addEventListener('click', function() {
     var searchValue = searchBox.value.replace(/ /g,"%20");
