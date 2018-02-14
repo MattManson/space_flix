@@ -1,0 +1,40 @@
+#favourites-page a{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    background-color: rgb(41, 43, 46);
+    color: rgb(240, 234, 220);
+    padding: 1em;
+    margin-left: 3em;
+    border-radius: 0.2em;
+    width: 10em;
+    text-align: center;
+}
+
+#favourites-page a:hover {
+    background-color: rgb(221, 124, 62);
+}
+
+#favourites-page h2 {
+    margin-top: 4em;
+    font-family: 'Abel', sans-serif;
+    background-color: rgb(240, 234, 220);
+    text-align: center;
+    color: rgb(41, 43, 46);
+    font-size: 1.8em;
+}
+
+#favourites-page img {
+    position: relative;
+    transition: .5s linear;
+    height: 100%;
+    width: auto;
+}
+
+#favourites-page div {
+    margin: 1em;
+    position: relative;
+    height: 13em;
+    width: auto;
+}
+

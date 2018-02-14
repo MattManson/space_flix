@@ -18,6 +18,8 @@ const app = function () {
   var search = document.querySelector('#search');
   var searchBox = document.querySelector('input');
   var deleteAll = document.querySelector('#delete-all');
+  var backButton = document.querySelector('#back');
+  var backButtonToFavourites = document.querySelector('#back-to-favourites');
   let click = new SearchModel();
   var closePopup = document.querySelector("#close_popup")
   closePopup.addEventListener('click', function(){
@@ -35,16 +37,22 @@ const app = function () {
   };
 
   favouritesButton.addEventListener('click', function () {
-      var favourites = new Favourites();
-      click.favouritesButtonClicked(favourites, favouriteVideoView);
+    var favourites = new Favourites();
+    click.favouritesButtonClicked(favourites, favouriteVideoView);
   });
 
   deleteAll.addEventListener('click', function () {
-      var favourites = new Favourites();
-      click.deleteButtonClicked(favourites, favouriteVideoView);
-      console.log('delete clicked');
+    var favourites = new Favourites();
+    click.deleteButtonClicked(favourites, favouriteVideoView);
   });
 
+  backButton.addEventListener('click', function () {
+    click.backButtonClicked();
+  });
+
+  backButtonToFavourites.addEventListener('click', function () {
+    click.backToFavouritesButtonClicked();
+  });
 
   search.addEventListener('click', function() {
     var searchValue = searchBox.value.replace(/ /g,"%20");

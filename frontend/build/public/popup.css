@@ -41,3 +41,21 @@
   width: 350px;
   height: 230px;
 }
+
+#toast{
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  background-color: rgb(41, 43, 46);
+  color: rgb(221, 124, 62);
+  padding: 16px;
+  border-radius: 4px;
+  z-index: 1;
+  box-shadow: 0,0,20px rgba(0,0,0,0.3);
+  visibility: hidden;
+  font-family: 'Abel', sans-serif;
+}
+
+#toast.show{
+  visibility: visible;
+}
