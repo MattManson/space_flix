@@ -45,7 +45,7 @@
 #toast{
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 45%;
   background-color: rgb(41, 43, 46);
   color: rgb(221, 124, 62);
   padding: 16px;
