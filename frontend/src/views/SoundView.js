@@ -1,6 +1,6 @@
 const SoundView = function (soundContainer) {
-    this.soundContainer = soundContainer;
-    this.soundCollection = null;
+  this.soundContainer = soundContainer;
+  this.soundCollection = null;
 };
 
 SoundView.prototype.renderSound = function(data) {

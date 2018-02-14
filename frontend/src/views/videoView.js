@@ -27,57 +27,68 @@ VideoView.prototype.closePopup = function(){
   this.vidClear();
 }
 
+VideoView.prototype.toggleVisibility = function () {
+  let frontPageContainer = document.querySelector('#front-page');
+  frontPageContainer.className = 'invisible';
+  let viewPageContainer= document.querySelector('#view-page');
+  viewPageContainer.className = 'invisible';
+  let favouritesPage = document.querySelector('#favourites-page');
+  favouritesPage.className = 'invisible';
+  let viewMediaContainer= document.querySelector('#view-media');
+  viewMediaContainer.className = 'visible';
+};
 
 VideoView.prototype.showThumbnail = function (correctVideoURL, correctThumbnailURL, dataObject) {
-    let frontPageContainer = document.querySelector('#front-page');
-    frontPageContainer.className = 'invisible';
-    let viewPageContainer= document.querySelector('#view-page');
-    viewPageContainer.className = 'invisible';
-    let favouritesPage = document.querySelector('#favourites-page');
-    favouritesPage.className = 'invisible';
-    let viewMediaContainer= document.querySelector('#view-media');
-    viewMediaContainer.className = 'visible';
-    var imgThumbNail = document.querySelector('#thumbnail');
-    console.log(correctThumbnailURL);
-    imgThumbNail.src = correctThumbnailURL;
-    imgThumbNail.onclick = function(){
-        this.open_popup(correctVideoURL)
-    }.bind(this);
-    var title = document.querySelector('#title');
-    title.innerText = dataObject.title;
-    var description = document.querySelector('#description');
-    description.innerText = dataObject.description;
-    var addToFavouritesButton = document.querySelector('#add-to-favourites-button');
-    addToFavouritesButton.addEventListener('click', function(e){
-        var addedToFavourites = document.querySelector('#added-to-favourites');
-        addedToFavourites.innerText = '';
-        var favourites = new Favourites();
-        var favouriteVideoView = new FavouriteVideoView(document.querySelector('#favourite-videos'));
-        favourites.onLoad = favouriteVideoView.videoRenderFavourites.bind(favouriteVideoView);
-        favourites.addToFavourites(e, correctVideoURL, correctThumbnailURL, dataObject)
-        addedToFavourites.innerText = 'Added to Favourites';
-        console.log('add to favourites clicked');
-    }.bind(this))
+  this.toggleVisibility();
+  var imgThumbNail = document.querySelector('#thumbnail');
+  console.log(correctThumbnailURL);
+  imgThumbNail.src = correctThumbnailURL;
+  imgThumbNail.onclick = function(){
+    this.open_popup(correctVideoURL)
+  }.bind(this);
+  var title = document.querySelector('#title');
+  title.innerText = dataObject.title;
+  var description = document.querySelector('#description');
+  description.innerText = dataObject.description;
+  this.changeButtonLayout();
+  var addToFavouritesButton = document.querySelector('#add-to-favourites-button');
+  addToFavouritesButton.addEventListener('click', function(e){
+    var addedToFavourites = document.querySelector('#added-to-favourites');
+    addedToFavourites.innerText = '';
+    var favourites = new Favourites();
+    var favouriteVideoView = new FavouriteVideoView(document.querySelector('#favourite-videos'));
+    favourites.onLoad = favouriteVideoView.videoRenderFavourites.bind(favouriteVideoView);
+    favourites.addToFavourites(e, correctVideoURL, correctThumbnailURL, dataObject)
+    addedToFavourites.innerText = 'Added to Favourites';
+    console.log('add to favourites clicked');
+  }.bind(this))
+}
+
+VideoView.prototype.changeButtonLayout = function () {
+  var backButton = document.querySelector('#back');
+  var backButtonToFavourites = document.querySelector('#back-to-favourites');
+  backButton.className = 'visible';
+  backButtonToFavourites.className = 'invisible';
 }
 
 VideoView.prototype.videoRender = function (data, dataObject) {
-    var substring = "mov";
-    var correctVideoURL = data[0].replace(/ /g, "%20");
-    if (!correctVideoURL.includes(substring)) {
-        var correctThumbNailURL = data[data.length - 2].replace(/ /g, "%20");
-        var img = document.createElement('img');
-        img.src = correctThumbNailURL;
-        img.onclick = function () {
-            this.showThumbnail(correctVideoURL, correctThumbNailURL, dataObject);
-        }.bind(this);
-        var titleDiv = document.createElement('div');
-        titleDiv.className = 'text-block';
-        var titleP = document.createElement('p');
-        titleP.innerText = dataObject.title;
-        titleDiv.appendChild(titleP);
-        titleDiv.appendChild(img)
-        this.videoContainer.appendChild(titleDiv);
-    }
+  var substring = "mov";
+  var correctVideoURL = data[0].replace(/ /g, "%20");
+  if (!correctVideoURL.includes(substring)) {
+    var correctThumbNailURL = data[data.length - 2].replace(/ /g, "%20");
+    var img = document.createElement('img');
+    img.src = correctThumbNailURL;
+    img.onclick = function () {
+      this.showThumbnail(correctVideoURL, correctThumbNailURL, dataObject);
+    }.bind(this);
+    var titleDiv = document.createElement('div');
+    titleDiv.className = 'text-block';
+    var titleP = document.createElement('p');
+    titleP.innerText = dataObject.title;
+    titleDiv.appendChild(titleP);
+    titleDiv.appendChild(img)
+    this.videoContainer.appendChild(titleDiv);
+  }
 }
 
 VideoView.prototype.vidClear = function(){
