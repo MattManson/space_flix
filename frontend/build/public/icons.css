@@ -88,7 +88,7 @@
   border-radius: 0.2em;
   width: 10em;
   height: 10em;
-  margin: 2em;
+  margin-right: 3em;
   padding-bottom: 4em;
 }
 
@@ -105,13 +105,16 @@
   padding: 0.8em;
 }
 
-.icons {
-  margin-left: auto;
-  margin-right: auto;
+#icons {
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .extra-buttons {
   display: grid;
+  width: 10em;
+  margin-right: 2em;
 }
 
 #front-page h3 {
