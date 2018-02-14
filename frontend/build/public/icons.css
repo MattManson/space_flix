@@ -5,44 +5,6 @@
   border-radius: 0.2em;
 }
 
-#not-planets{
-  margin: 2em;
-  background-color: rgb(240, 234, 220);
-  padding: 0.5em 1.3em 1.3em 1.3em;
-  border-radius: 0.2em;
-}
-
-#index{
-  margin: 2em;
-  background-color: rgb(240, 234, 220);
-  padding: 0.5em 1.3em 1.3em 1.3em;
-  border-radius: 0.2em;
-}
-
-#index a {
-  display: inline-block;
-  font-family: 'Open Sans', sans-serif;
-  color: orange;
-  width: 5em;
-  padding: 0.2em;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.2em;
-  width: 10em;
-  height: 10em;
-  margin: 2em;
-}
-
-#index a:hover {
- color: white;
-}
-
-#index a img{
-  width: 7em;
-  height: 7em;
-  margin-bottom: 0.8em;
-}
-
 .planet-icons {
   border-radius: 0.2em;
   background: transparent;
@@ -73,6 +35,13 @@
   padding: 0.4em;
 }
 
+#not-planets{
+  margin: 2em;
+  background-color: rgb(240, 234, 220);
+  padding: 0.5em 1.3em 1.3em 1.3em;
+  border-radius: 0.2em;
+}
+
 .not-planet-icons{
   border-radius: 0.2em;
   background: transparent;
@@ -101,6 +70,48 @@
 
 #sun {
   padding: 0.5em;
+}
+
+#index {
+  margin: 2em;
+  background-color: rgb(240, 234, 220);
+  padding: 0.5em 1.3em 1.3em 1.3em;
+  border-radius: 0.2em;
+}
+
+#index a {
+  font-family: 'Open Sans', sans-serif;
+  width: 5em;
+  padding: 0.2em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.2em;
+  width: 10em;
+  height: 10em;
+  margin: 2em;
+  padding-bottom: 4em;
+}
+
+#index a:hover {
+  background-color: rgb(221, 124, 62);
+  color: rgb(240, 234, 220);
+  border-radius: 2em;
+}
+
+#index a img{
+  width: 7em;
+  height: 7em;
+  margin-bottom: 0.8em;
+  padding: 0.8em;
+}
+
+.icons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.extra-buttons {
+  display: grid;
 }
 
 #front-page h3 {
