@@ -19,7 +19,7 @@
   padding: 0.3em;
 }
 
-.planet-icons img{
+.planet-icons img {
   width: 7em;
   height: 7em;
   margin-bottom: 0.8em;
@@ -106,10 +106,10 @@
   padding: 0.8em;
 }
 
-#icons {
-  display: flex;
-  justify-content: center;
-  margin: 0;
+.icons {
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .extra-buttons {

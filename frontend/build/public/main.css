@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(94, 98, 89);
+  background-color: rgb(135, 140, 127);
   display: block;
 }
 
@@ -109,7 +109,7 @@ input {
 }
 
 .ImageAndTextContainer:hover #bottom-left {
-  color: white;
+  color: rgb(240, 234, 220);
   opacity: 1;
   transition: .5s linear;
 }
