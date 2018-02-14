@@ -4,9 +4,13 @@
   margin-top: 2em;
   background-color: rgb(240, 234, 220);
   padding: 0.4em;
-  width: 95%;
+  width: 96%;
   text-align: center;
   border-radius: 0.2em;
+}
+
+#view-page #videos-h2 {
+  margin-top: 10em;
 }
 
 #videos {
