@@ -43,17 +43,21 @@
 }
 
 #toast{
-  position: fixed;
-  top: 50%;
-  left: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 6em;
+  margin-left: 17em;
   background-color: rgb(41, 43, 46);
   color: rgb(221, 124, 62);
-  padding: 16px;
-  border-radius: 4px;
+  width: 15em;
+  height: 5em;
+  border-radius: 0.2em;
   z-index: 1;
-  box-shadow: 0,0,20px rgba(0,0,0,0.3);
   visibility: hidden;
   font-family: 'Abel', sans-serif;
+  font-size: 2em;
 }
 
 #toast.show{
