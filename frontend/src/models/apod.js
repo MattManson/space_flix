@@ -11,9 +11,10 @@ Apod.prototype.displayImage = function(imageDetails) {
   var divDetails = document.querySelector('#bottom-left');
   var apodImage = document.createElement('img');
   var apodDetails = document.createElement('p');
-  apodImage.src = imageDetails.hdurl;
+  imageLocation.style.backgroundImage = `url(${imageDetails.hdurl})`;
+  // apodImage.src = imageDetails.hdurl;
+  // imageLocation.appendChild(apodImage);
   apodDetails.innerText = 'Image of The Day : ' + imageDetails.title;
-  imageLocation.appendChild(apodImage);
   divDetails.appendChild(apodDetails);
 }
 
