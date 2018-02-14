@@ -20,7 +20,8 @@ ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailU
     description.innerText = dataObject.description;
     var addToFavourites = document.querySelector('#add-to-favourites-button');
     addToFavourites.innerText = '';
-
+    var addedToFavourites = document.querySelector('#added-to-favourites');
+    addedToFavourites.innerText = '';
 }
 
 ImageView.prototype.imageRender = function (data, dataObject) {
