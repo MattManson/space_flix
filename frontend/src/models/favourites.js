@@ -25,5 +25,10 @@ Favourites.prototype.addToFavourites = function (event, correctVideoURL, correct
     request.post(createRequestComplete, body);
 }
 
+Favourites.prototype.deleteFavourites = function () {
+    var request = new Request(this.url);
+    request.delete();
+}
+
 
 module.exports = Favourites;

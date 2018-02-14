@@ -26,6 +26,12 @@ SearchModel.prototype.favouritesButtonClicked = function (data, view) {
     this.hideViewPage();
 }
 
+SearchModel.prototype.deleteButtonClicked = function (data, view) {
+    view.clear();
+    data.deleteFavourites();
+    this.hideViewPage();
+}
+
 SearchModel.prototype.buttonClicked = function(data, view){
   view.clear();
   data.onLoad = view.videoRender.bind(view);
@@ -48,5 +54,6 @@ SearchModel.prototype.buttonClickedSound = function(data, view){
   let viewPageContainer = document.querySelector('#sound-page');
   viewPageContainer.className = 'visible';
 };
+
 
 module.exports = SearchModel;

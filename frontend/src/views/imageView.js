@@ -18,6 +18,8 @@ ImageView.prototype.showThumbnail = function (correctImageURL, correctThumbnailU
     title.innerText = dataObject.title;
     var description = document.querySelector('#description');
     description.innerText = dataObject.description;
+    var addToFavourites = document.querySelector('#add-to-favourites-button');
+    addToFavourites.innerText = '';
 
 }
 
