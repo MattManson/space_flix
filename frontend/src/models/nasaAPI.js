@@ -36,10 +36,6 @@ NasaAPI.prototype.getJSONData = function (hrefs) {
     var request = new Requests(hrefs[i].href);
     request.getRequest(this.onLoad, hrefs[i]);
   }
-  // hrefs.forEach(function (data) {
-  //     var request = new Requests(data.href)
-  //     request.getRequest(this.onLoad, data.title);
-  // }.bind(this))
 }
 
 module.exports = NasaAPI;
