@@ -35,11 +35,14 @@
   margin-top: 5px;
   font-family: sans-serif;;
   font-weight: bold;
+  color: white;
 }
 
 #popup_contents {
-  width: 350px;
-  height: 230px;
+  position: relative;
+  width: 600px;
+  height: 0px;
+  padding-bottom: 60%;
 }
 
 #toast{
