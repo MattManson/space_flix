@@ -72,8 +72,8 @@ header {
 }
 
 h1 {
-  color: rgb(187, 124, 62);
-  margin: 0;
+  color: rgb(221, 124, 62);
+  margin: 0 0 0 0.6em;
   font-family: 'Allerta', sans-serif;
   font-size: 40pt;
   letter-spacing: 3px;
