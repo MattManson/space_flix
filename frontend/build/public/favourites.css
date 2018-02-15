@@ -1,5 +1,4 @@
-#favourites-page a{
-
+#favourites-page a {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
     background-color: rgb(41, 43, 46);
@@ -22,6 +21,7 @@
     text-align: center;
     color: rgb(41, 43, 46);
     font-size: 1.8em;
+    padding: 0.5em;
 }
 
 #favourites-page img {
@@ -37,4 +37,3 @@
     height: 13em;
     width: auto;
 }
-

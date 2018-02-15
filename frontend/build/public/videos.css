@@ -1,12 +1,10 @@
 #view-page h2 {
   font-family: 'Abel', sans-serif;
-  margin-left: 1em;
   margin-top: 2em;
   background-color: rgb(240, 234, 220);
   padding: 0.4em;
-  width: 96%;
+  width: 100%;
   text-align: center;
-  border-radius: 0.2em;
 }
 
 #view-page #videos-h2 {
