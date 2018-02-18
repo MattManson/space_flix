@@ -33,7 +33,7 @@ Using the site
 
 Authors
 
-Catriona Meriel, Mark Manson, Fraser Brown and Alex Constantinou
+Catriona Meriel, Matt Manson, Fraser Brown and Alex Constantinou
 
 License
 
