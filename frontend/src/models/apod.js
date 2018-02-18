@@ -12,8 +12,7 @@ Apod.prototype.displayImage = function(imageDetails) {
   var apodImage = document.createElement('img');
   var apodDetails = document.createElement('p');
   imageLocation.style.backgroundImage = `url(${imageDetails.hdurl})`;
-  // apodImage.src = imageDetails.hdurl;
-  // imageLocation.appendChild(apodImage);
+
   apodDetails.innerText = 'Image of The Day : ' + imageDetails.title;
   divDetails.appendChild(apodDetails);
 }
